@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centre Régional des Impôts du centre 2</title>
+  <title>Contact</title>
   <link rel="stylesheet" href="/Document_css/CRIC2.css">
   <link rel="icon" type="image/png" href="/image_projet/Centre2.png">
-  <link rel="stylesheet" href="/Document_css/Newsletter.css">
+  <link rel="stylesheet" href="/Document_css/contact.css">
  </head>
 
 <body>
@@ -83,23 +83,27 @@
     </div>
 
   </header>
+
   <main>
-    <!-- Section Newsletter -->
-   <div class="contact_global">
-     <div class="lettre">
-      <div class="newsletter">
-        <h2>Inscrivez-vous à notre newsletter</h2>
-        <p>Recevez les dernières actualités et informations du Centre Régional des Impôts du Centre 2 directement dans
-          votre
-          boîte mail.</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Votre adresse mail" required>
-          <button type="submit">S'inscrire</button>
+    <div class="contact_global">
+ <div class="contact-form">
+      <div class="contact">
+        <h2>Contactez-nous</h2>
+        <form>
+          <label for="email">Adresse mail :</label>
+          <input type="email" id="email" name="email" placeholder="Votre adresse mail" />
+
+          <label for="tel">Numéro de téléphone :</label>
+          <input type="tel" id="tel" name="tel" placeholder="Votre numéro de téléphone" required />
+
+          <label for="suggestion">Comment pouvons nous vous aidez</label>
+          <textarea id="suggestion" name="suggestion" rows="4" placeholder="soyez précis(e)"></textarea>
+
+          <input type="submit" value="Envoyer" />
         </form>
-       
       </div>
-      <div class="photo">
-        <p>Restons toujours ensemble</p>
+      <div class="appel">
+        <p>Nous joindre pour nous soumettre vos difficultés</p>
       </div>
     </div>
     <div class="acces_rapide">
@@ -114,11 +118,11 @@
         <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Ddpr-front-prod%26redirect_uri%3Dhttps%253A%252F%252Fdpr.harmony2.cm%252F%26response_type%3Dcode%26scope%3Dopenid%26state%3D9ca7eadecb764b19bc616c7840122fa6%26code_challenge%3DpFyU0KC__Sz6mtjafK51JuhrboRFdypytxdSr62ZmJ4%26code_challenge_method%3DS256">Déclaration Pré-remplie(DPR)</a></li>
         <li><a href="https://otp.dgi.cm/">OTP/E-Billing</a></li>
       </ul>
-    </div> 
-   </div>
-     <hr>
+    </div>
+    </div>
+   <hr>
       <br>
-       <div class="vrai_globe">
+      <div class="vrai_globe">
          <div class="structure_globale">
             <div class="CSI">
               <p>CSI-EPA</p>
