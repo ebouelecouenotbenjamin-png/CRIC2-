@@ -23,7 +23,7 @@ body {
   padding: 0;
   background: var(--blanc);
   color: var(--vert);
-  }  
+}  
 
 /* --- Header --- */
 .header-flex {
@@ -276,19 +276,19 @@ a {
   gap: 7px;
 }
 .regional .batiment{
-  background: url( /image_projet/CRIC2_image.png) no-repeat center/cover;
+  background: url(../image_projet/CRIC2_image.png) no-repeat center/cover;
 }
 .tt, .ss, .vv{
   text-align: right;
   font-weight: bold;
   height: 40px;
   width: 210px;
-  position: right: 0;
-  margin:0 0 0 50%;
+  /* position: right: 0; */
+  margin-left: 50%;
   padding-top: 14px;
   text-align: center;
-  color:black ;
-  border:2px solid orange;
+  color: black;
+  border: 2px solid orange;
 }
 .tt:hover, .ss:hover, .pp:hover, .vv:hover{
   background: var(--vert);
@@ -302,7 +302,7 @@ a {
    gap: 7px;
 }
 .service_image{
-  background: url(/image_projet/service_image.png) no-repeat center/cover ;
+  background: url(../image_projet/service_image.png) no-repeat center/cover ;
 }
 .Documentations{
   display: grid;
@@ -311,7 +311,7 @@ a {
    gap: 7px;
 }
 .documentation_image{
-  background: url(/image_projet/documentations.jpg) no-repeat center/cover;
+  background: url(../image_projet/documentations.jpg) no-repeat center/cover;
 }
 .global {
   display: flex;
@@ -336,17 +336,16 @@ a {
  border-left: 2px solid var(--orange);
   border-bottom: 2px solid var(--orange);
   box-shadow: 0 2px 8px rgba(10, 133, 96, 0.07);
-  box-shadow: ;
+  /* box-shadow: ; */
   text-align: center;
   transition: background 0.5s;
-
 }
 .CSI:hover{
 background-color: var(--vert);
 }
   
   .globe_image{
-    background: url(/image_projet/goeYaounde.webp) no-repeat;
+    background: url(../image_projet/goeYaounde.webp) no-repeat;
   }
 body p{
   color: black;
@@ -451,28 +450,15 @@ hr {
 }
 body{  
   font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-
 }
 h1, h2, h3, h4{
   font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
 footer{
-font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
 
 @media (max-width: 900px) {
@@ -492,7 +478,6 @@ font-family: "Roboto", sans-serif;
 /* mon responsive designe*/
 /* --- Responsive Design adapté à CRIC2.html --- */
 
-/* Tablette : largeur ≤ 900px */
 @media (max-width: 900px) {
   .header-flex {
     grid-template-columns: 1fr 2fr;
@@ -529,7 +514,6 @@ font-family: "Roboto", sans-serif;
   }
 }
 
-/* Mobile : largeur ≤ 600px */
 @media (max-width: 600px) {
   .header-flex {
     grid-template-columns: 1fr;
