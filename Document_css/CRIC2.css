@@ -23,22 +23,7 @@ body {
   padding: 0;
   background: var(--blanc);
   color: var(--vert);
-  }
-
-/* Header grid 
-.header-flex {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
-  justify-items: center;
-  gap: 10px;
-  background: var(--blanc);
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 20px 0 0 0;
-}
-  */
-  
+  }  
 
 /* --- Header --- */
 .header-flex {
