@@ -343,13 +343,13 @@ a {
 .CSI:hover{
 background-color: var(--vert);
 }
-  
   .globe_image{
     background: url(../image_projet/goeYaounde.webp) no-repeat;
   }
 body p{
   color: black;
 }
+
 footer p{
   color: var(--blanc);
 }
