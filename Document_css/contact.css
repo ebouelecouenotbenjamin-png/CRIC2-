@@ -54,7 +54,7 @@ input, label, textarea, button {
   text-align: left;
   border-bottom: 2px solid orange;
   border-left: 1px solid green;
-  box-shadow: ;
+  box-shadow: -4px 4px 10px rgba(0,0,0,0.25);
 }
 
 .contact-form input[type="submit"] {
