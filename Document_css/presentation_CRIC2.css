@@ -5,11 +5,10 @@
 }
 
 .acces_rapide {
-  padding: 12px;
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-  background-color: #0a8560;
+  background: #0a8560;
   border-radius: 8px;
   align-self: start;
   position: relative;
@@ -17,16 +16,20 @@
 }
 .acces_rapide p {
   color: orange;
-  font-size: 1.4em;
+  font-size: 1.8em;
   margin-bottom: 12px;
   font-weight: bold;
 }
 .acces_rapide ul li {
-  height: 45px;
+  height: 60px;
   background-color: #0a8560;
   text-align: center;
-  border-top: 2px solid #ff9800;
+  border-top: 2px solid #ff9800;*/
   transition: background 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 }
 .acces_rapide a {
   color: white;
@@ -34,7 +37,6 @@
 }
 .acces_rapide ul li:hover {
   background-color: #ff9800;
-  border: 2px solid #0a8560;
 }
 
 .vrai_globe {
