@@ -6,37 +6,40 @@
 .contact-form {
   background: #fff;
   margin: 5px auto;
-  padding: 30px 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(26, 35, 126, 0.08);
-  border: 1px solid #e3e7ee;
+  padding: 10px 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
 .contact-form {
-  color: #0a8560;
+  color: hwb(36 2% 19% / 0.973);
   text-align: center;
   margin-bottom: 20px;
 }
 .appel {
-  background: url(../image_projet/email.png) no-repeat center/cover;
-  border-right: 2px solid orange;
-  border-bottom: 4px solid orange;
+  background: url(../image_projet/mail_image.png) no-repeat center/cover;
   text-align: center;
   border-radius: 4px;
-  color: orange;
+  color: hwb(36 2% 19% / 0.973);
   font-size: 1.5em;
   font-weight: bold;
 }
 
 .contact {
-  border-left: 2px solid orange;
-  border-top: 4px solid orange;
   text-align: center;
   border-radius: 4px;
 }
+ span a {
+  color: white;
+  font-weight: bold;
+  background:hwb(36 2% 19% / 0.973) ;
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 3px 6px;
+ }
 input, label, textarea {
   all: unset;
 }
@@ -52,51 +55,48 @@ input, label, textarea {
   font-size: 1.2em;
   color: black;
   text-align: left;
-  border-bottom: 2px solid orange;
-  border-left: 1px solid green;
-  box-shadow: -4px 4px 10px rgba(0,0,0,0.25);
+  box-shadow: -1px 1px 4px hwb(36 2% 19% / 0.973);
 }
-
 .contact-form input[type="submit"] {
-  background: #0a8560;
+  background: hwb(36 2% 19% / 0.973);
   color: #fff;
   border-radius: 5px;
   padding: 10px 0;
-  width: 200px;
-  position: right: 0 ;
-  margin: 0 0 0 48%;
-  font-size: 0.8em;
+  width: 150px;
+  position: center ;
+  font-size: 1.1em;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s;
+  box-shadow: -1px 1px 4px black;
 }
 
 .contact-form input[type="submit"]:hover {
-  background: orange;
-  color: #0a8560;
+  background: rgb(100, 42, 3);
+  color: white;
 }
 
 .acces_rapide {
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-  background: #0a8560;
+  background: hwb(36 2% 19% / 0.973);
   border-radius: 8px;
   align-self: start;
   position: relative;
   z-index: 1;
 }
 .acces_rapide p {
-  color: orange;
+  color: black;
   font-size: 1.8em;
   margin-bottom: 12px;
   font-weight: bold;
 }
 .acces_rapide ul li {
   height: 60px;
-  background-color: #0a8560;
+  background-color: hwb(36 2% 19% / 0.973);
   text-align: center;
-  border-top: 2px solid #ff9800;*/
+  border-top: 2px solid white;*/
   transition: background 0.5s;
   display: flex;
   justify-content: center;
@@ -108,7 +108,7 @@ input, label, textarea {
   font-size: 1.2em;
 }
 .acces_rapide ul li:hover {
-  background-color: #ff9800;
+  background-color: rgb(100, 42, 3);
 }
 
 .vrai_globe {
@@ -122,17 +122,15 @@ h2 {
   margin: 0 0 14px 0;
   letter-spacing: 5px;
   text-transform: capitalize;
-  background: grey;
+  background: hwb(36 2% 19% / 0.973);
   text-align: center;
   height: 100px;
-  border-left: 5px solid black;
+  border-left: 5px solid rgb(92, 65, 14);
   width: auto;
   display: flex;
   align-items: center;
   justify-content: left;
 }
-
-
 
 @media (max-width: 900px) {
   .contact_global {

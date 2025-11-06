@@ -9,17 +9,17 @@
   <link rel="icon" type="image/png" href="../image_projet/Centre2.png">
  </head>
 <body>
-  <div class="header-flex">
+  <section class="entete">
     <div class="logo">
-  <img src="../image_projet/minfisolde.jpg" alt="">
+      <img src="../image_projet/minfisolde.jpg" alt="">
       <p>Ministère des Finances</p>
     </div>
     <h1>Centre Regional des Impôts du Centre 2</h1>
     <div class="logo">
-  <img src="../image_projet/dgi.png" alt="">
+      <img src="../image_projet/dgi.png" alt="">
       <p>Direction Générale des Impôts</p>
     </div>
-  </div>
+  </section>   
    <br>
   <br>
 <header>
@@ -74,21 +74,27 @@
   <main>
     <h2>CONTACTS</h2>
     <div class="contact_global">
+
+<div class="infomation_contact">
+  <h3>Contacter-nous pour plus d'informations</h3>
+  <p>Pour nous joindre veillez nous contacter <br> - Par appel au <span>8200</span> <br> -Par email au <span>www.CRIC2@gmail.com</span> <br> <br> Pour avoir des informations sur une de nos structures veillez cliquer sur le nom de la structure en question ou se rendre à &nbsp &nbsp<span><a href="../Document_html/nos_centres.html">Nos structures</a></span> <br> Envoyez nous des messages via le formulaire ci-dessous </p>
  <div class="contact-form">
       <div class="contact">
         <h3>Contactez-nous</h3>
-        <form>
-          <input type="text" id="nom" name="nom" placeholder="Votre nom complet*" />
-          <input type="email" id="email" name="email" placeholder="Votre adresse de courriel*" />
+        <form action="https://formspree.io/f/mnnoeblz" method="post">
+          <input type="text" id="nom" name="nom" placeholder="Votre nom complet*" required />
+          <input type="email" id="email" name="email" placeholder="Votre adresse de courriel*" required />
           <input type="text" id="objet" name="objet" placeholder="Objet/ motif*" />
           <textarea id="suggestion" name="suggestion" rows="4" placeholder="Votre message* (soyez bref et précis) "></textarea>
 
-          <input type="submit" value="Envoyer le message" />
+          <input type="submit" value="Envoyer " />
         </form>
       </div>
       <div class="appel">
       </div>
     </div>
+
+</div>
     <div class="acces_rapide">
       <p>Acces rapide</p>
       <ul>
@@ -105,8 +111,9 @@
     </div>
    <hr>
       <br>
-      <div class="vrai_globe">
-         <div class="structure_globale">
+  <section class="S_CRIC2">
+
+    <div class="structure_CRIC2">
             <div class="CSI">
               <p>CSI-EPA</p>
             </div>
@@ -126,10 +133,10 @@
               <p>CFLP Yaoundé 7</p>                          
             </div>
           </div>
-          <div class="globe_image">            
+          <div class="structure_image">            
           </div>
       </div>       
-    </section>
+  </section>        
   </main>
   <footer>
     <div class="pieds">

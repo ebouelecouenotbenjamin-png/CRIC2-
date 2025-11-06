@@ -1,9 +1,9 @@
-.CRI {
+.tuto_section1 {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 70px;
 }
-.liste_tuto {
+.tous_les_tuto {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   /* 2 ou 3 colonnes selon l'espace */
@@ -11,7 +11,12 @@
   margin-top: 30px;
 }
 
-.tuto_li {
+.tuto_ima,
+.tuto_IRPP,
+.tuto_BEF,
+.tuto_tim,
+.tuto_DSF,
+.tuto_docf {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -23,12 +28,17 @@
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.tuto_li:hover {
+.tuto_ima:hover,
+.tuto_IRPP:hover,
+.tuto_BEF:hover,
+.tuto_tim:hover,
+.tuto_DSF:hover,
+.tuto_docf:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-.GI {
+.image_ima {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -39,9 +49,9 @@
   font-size: 0.9em;
   color: #666;
   border: 4px solid orange;
-  background: url(../image_projet/Gi.png) no-repeat center/cover;
+  background: url(../image_projet/IMA.png) no-repeat center/cover;
 }
-.GD {
+.image_IRPP {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -54,7 +64,7 @@
   border: 4px solid green;
   background: url(../image_projet/IRP.png) no-repeat center/cover;
 }
-.BF {
+.image_BEF {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -64,10 +74,10 @@
   margin-bottom: 15px;
   font-size: 0.9em;
   color: #666;
-  border: 4px solid black;
-  background: url(../image_projet/Gi.png) no-repeat center/cover;
+  border: 4px solid rgba(18, 18, 150, 0.801);
+  background: url(../image_projet/bef.png) no-repeat center/cover;
 }
-.DS {
+.image_DSF {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -80,7 +90,7 @@
   border: 4px solid red;
   background: url(../image_projet/DSF.png) no-repeat center/cover;
 }
-.DF {
+.image_docf {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -91,9 +101,9 @@
   font-size: 0.9em;
   color: #666;
   border: 4px solid black;
-  background: url(../image_projet/DF.png) no-repeat center/cover;
+  background: url(../image_projet/Doc.png) no-repeat center/cover;
 }
-.TET {
+.image_tim {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -103,11 +113,16 @@
   margin-bottom: 15px;
   font-size: 0.9em;
   color: #666;
-  border: 4px solid black;
-  background: url(../image_projet/DF.png) no-repeat center/cover;
+  border: 4px solid rgb(82, 18, 82);
+  background: url(../image_projet/Tim.png) no-repeat center/cover;
 }
 
-.tuto_pa ul {
+.rubrique_ima ul,
+.rubrique_IRPP ul,
+.rubrique_BEF ul,
+.rubrique_DSF ul,
+.rubrique_tim ul,
+.rubrique_docf ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -115,7 +130,12 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.tuto_pa ul li a {
+.rubrique_ima ul li a,
+.rubrique_IRPP ul li a,
+.rubrique_BEF ul li a,
+.rubrique_DSF ul li a,
+.rubrique_tim ul li a,
+.rubrique_docf ul li a {
   color: black;
   text-decoration: none;
   padding: 5px 0;
@@ -124,52 +144,57 @@
   transition: color 0.2s ease;
 }
 
-.tuto_pa ul li a:hover {
+.rubrique_ima ul li a:hover,
+.rubrique_IRPP ul li a:hover,
+.rubrique_BEF ul li a:hover,
+.rubrique_DSF ul li a:hover,
+.rubrique_tim ul li a:hover,
+.rubrique_docf ul li a:hover {
   background: grey;
   color: white;
   box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
 }
 
 .acces_rapide {
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-  background: #0a8560;
+  background: grey;
   border-radius: 8px;
   align-self: start;
   position: relative;
   z-index: 1;
 }
 .acces_rapide p {
-  color: orange;
+  color: black;
   font-size: 1.8em;
   margin-bottom: 12px;
   font-weight: bold;
 }
 .acces_rapide ul li {
   height: 60px;
-  background-color: #0a8560;
+  background: grey;
   text-align: center;
-  border-top: 2px solid #ff9800;*/
+  border-top: 2px solid white;
   transition: background 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 .acces_rapide a {
   color: white;
   font-size: 1.2em;
 }
 .acces_rapide ul li:hover {
-  background-color: #ff9800;
+  background: black;
 }
-.vrai_globe {
+.tuto_section2 {
   margin-top: 18px;
   clear: both;
 }
 
-.CRIC2 {
+.tuto_corps {
   background: linear-gradient(180deg, #ffffff 0%, #f6fff8 100%);
   padding: 22px;
   border-radius: 12px;
@@ -193,7 +218,7 @@ h2 {
   justify-content: left;
 }
 
-.CRIC2 > p:first-of-type {
+.tuto_corps > p:first-of-type {
   color: #183233;
   background: #ffffff;
   padding: 14px 16px;
@@ -202,7 +227,7 @@ h2 {
   margin-bottom: 18px;
 }
 
-.CRIC2 h3 {
+.tuto_corps h3 {
   display: inline-block;
   background: gray;
   color: #fff;
@@ -210,44 +235,46 @@ h2 {
   margin: 10px 0 6px 0;
   font-size: 1.05rem;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border-radius: 8px;
 }
 
-.CRIC2 h3 + p {
+.tuto_corps h3 + p {
   background: #fff;
   padding: 12px 14px;
   margin: 0 0 12px 0;
   color: #222;
   line-height: 1.6;
+  text-align: justify;
 }
 
-.CRIC2 h3:hover {
+.tuto_corps h3:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 18px rgba(10, 133, 96, 0.08);
 }
 
-.CRIC2::before {
+.tuto_corps::before {
   content: "";
   display: block;
   height: 6px;
-  width: 80px;
+  width: 120px;
   border-radius: 6px;
-  background: linear-gradient(90deg, #0a8560 0%, #ff9800 100%);
+  background: linear-gradient(90deg, black 0%, grey 100%);
   margin: 6px 0 18px 0;
 }
 
 @media (max-width: 900px) {
-  .CRI {
+  .tuto_section1 {
     grid-template-columns: 1fr;
     gap: 18px;
   }
-  .CRIC2 {
+  .tuto_corps {
     padding: 16px;
   }
-  .CRIC2 h3 {
+  .tuto_corps h3 {
     font-size: 1rem;
     padding: 7px 10px;
   }
-  .CRIC2 h3 + p {
+  .tuto_corps h3 + p {
     padding: 10px;
   }
 
@@ -255,7 +282,7 @@ h2 {
     margin-left: 0;
     padding: 14px;
   }
-  .vrai_globe {
+  .tuto_section2 {
     grid-template-columns: 1fr;
     margin-top: 8px;
   }
