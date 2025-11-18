@@ -1,30 +1,47 @@
+/* ===================================================================
+   ORGANIGRAMME PAGE - Styles modernes et responsifs
+   Basé sur le système de variables et design de CRIC2.css
+   Préserve la logique du diagramme organisationnel
+   ================================================================= */
+
 .CRI {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 70px;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .CRIC2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: none;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
+
 .org_image {
   background: url(../image_projet/orga_image.png) no-repeat center/cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
 }
 
 /* Conteneur principal de l'organigramme */
 .organigramme {
-  display: inline-block; /* Permet au conteneur de s'adapter au contenu */
+  display: inline-block;
   margin: 0 auto;
   text-align: center;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--blanc) 0%, var(--gris-light) 100%);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gris-medium);
 }
 
-/* Style de base pour les listes (qui créent la structure) */
+/* Style de base pour les listes */
 .organigramme ul {
-  padding-top: 80px; /* Espace pour les lignes de connexion */
+  padding-top: 80px;
   position: relative;
-  display: flex; /* Aligne les enfants horizontalement */
+  display: flex;
   justify-content: center;
   list-style: none;
   margin: 0;
@@ -32,12 +49,13 @@
 
 .organigramme li {
   display: flex;
-  flex-direction: column; /* Les enfants (ul) se placent sous le parent (span) */
-  align-items: center; /* Centre les nœuds */
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  padding: 0 2px; /* Espace horizontal entre les frères */
+  padding: 0 2px;
   list-style: none;
 }
+
 .organigramme li > ul::before {
   content: "";
   position: absolute;
@@ -46,9 +64,10 @@
   transform: translateX(-50%);
   width: 0;
   height: 80px;
-  border-left: 2px solid #ccc;
+  border-left: 2px solid var(--gris-medium);
   z-index: 1;
 }
+
 .organigramme li::before,
 .organigramme li::after {
   content: "";
@@ -57,13 +76,13 @@
   z-index: 1;
 }
 
-/* Ligne verticale MONTANTE */
+/* Ligne verticale montante */
 .organigramme li::before {
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 15px;
-  border-left: 2px solid #ccc;
+  border-left: 2px solid var(--gris-medium);
 }
 
 /* Barre horizontale */
@@ -71,92 +90,112 @@
   left: 0;
   width: 100%;
   height: 0;
-  border-top: 2px solid #ccc;
+  border-top: 2px solid var(--gris-medium);
 }
 
-/* Cacher les lignes pour le Nœud Racine (Niveau 1) */
+/* Cacher les lignes pour le nœud racine */
 .organigramme > ul > li::before,
 .organigramme > ul > li::after {
   display: none;
 }
 
-/* Ajuster la barre horizontale pour le premier enfant */
+/* Ajuster la barre pour le premier enfant */
 .organigramme li:first-child::after {
   left: 50%;
   width: 50%;
 }
 
-/* Ajuster la barre horizontale pour le dernier enfant */
+/* Ajuster la barre pour le dernier enfant */
 .organigramme li:last-child::after {
   left: 0;
   width: 50%;
 }
 
-/* Cacher la barre si c'est un enfant unique */
+/* Cacher la barre pour enfant unique */
 .organigramme li:first-child:last-child::after {
   display: none;
 }
 
-/* --- Style des Nœuds (les boîtes) --- */
+/* Style des nœuds */
 .organigramme li span {
   display: block;
   padding: 12px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gris-medium);
   border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  min-width: 70px; /* Largeur minimale pour la lisibilité */
+  background: var(--blanc);
+  box-shadow: var(--shadow-sm);
+  min-width: 70px;
   position: relative;
-  z-index: 2; /* S'assure que le nœud est AU-DESSUS des lignes */
+  z-index: 2;
   font-size: 12px;
   line-height: 1.4;
   height: auto;
   width: auto;
+  transition: all var(--transition-medium);
 }
 
-/* --- COULEURS (selon vos demandes précédentes) --- */
-
-/* NIVEAU 1 (Rouge) */
+/* Niveau 1 (Orange) */
 .organigramme > ul > li > span {
-  background-color: rgba(255, 166, 0, 0.836); /* Rouge */
-  color: white;
-  border-color: rgba(255, 166, 0, 0.836);
+  background: linear-gradient(
+    135deg,
+    var(--orange) 0%,
+    var(--orange-dark) 100%
+  );
+  color: var(--blanc);
+  border-color: var(--orange-dark);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   width: 200px;
-  height: auto;
+  box-shadow: var(--shadow-md);
 }
 
-/* NIVEAU 2 (Vert) */
+.organigramme > ul > li > span:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Niveau 2 (Vert) */
 .organigramme > ul > li > ul > li > span {
-  background-color: #136126c2; /* Vert */
-  color: white;
-  border-color: #136126c2;
-  width: 50px;
-  font-size: 12px;
-  height: auto;
-}
-
-/* NIVEAU 3 (Orange) */
-.organigramme > ul > li > ul > li > ul > li > span {
-  background-color: grey; /* Orange */
-  color: #333;
-  border-color: grey;
-  font-size: 12px;
-  min-width: 10px;
-  height: auto;
+  background: linear-gradient(135deg, var(--vert) 0%, var(--vert-dark) 100%);
+  color: var(--blanc);
+  border-color: var(--vert-dark);
   width: auto;
+  min-width: 80px;
+  font-size: 12px;
+  box-shadow: var(--shadow-sm);
 }
 
-/* --- Style pour JavaScript (Interactivité) --- */
+.organigramme > ul > li > ul > li > span:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
 
+/* Niveau 3 et plus (Gris) */
+.organigramme > ul > li > ul > li > ul > li > span {
+  background: linear-gradient(
+    135deg,
+    var(--gris-medium) 0%,
+    var(--gris-dark) 100%
+  );
+  color: var(--blanc);
+  border-color: var(--gris-dark);
+  font-size: 11px;
+  min-width: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.organigramme > ul > li > ul > li > ul > li > span:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Interactivité */
 .organigramme span.collapsible {
-  cursor: pointer; /* Indique que le nœud est cliquable */
+  cursor: pointer;
 }
 
-/* Ajoute un indicateur [+] ou [-] */
 .organigramme span.collapsible::after {
-  content: "−"; /* Signe Moins */
+  content: "−";
   position: absolute;
   right: 10px;
   top: 50%;
@@ -166,10 +205,9 @@
 }
 
 .organigramme span.collapsible.collapsed::after {
-  content: "+"; /* Signe Plus */
+  content: "+";
 }
 
-/* Cache les enfants lorsque le parent est réduit */
 .organigramme ul.collapsed {
   display: none;
 }
@@ -177,113 +215,182 @@
 .acces_rapide {
   width: 100%;
   box-sizing: border-box;
-  text-align: center;
-  background: #0a8560;
-  border-radius: 8px;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--vert) 0%, var(--vert-dark) 100%);
+  border-radius: 12px;
   align-self: start;
   position: relative;
   z-index: 1;
+  box-shadow: var(--shadow-md);
 }
+
 .acces_rapide p {
-  color: orange;
-  font-size: 1.8em;
-  margin-bottom: 12px;
-  font-weight: bold;
+  color: var(--blanc);
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
+
+.acces_rapide ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .acces_rapide ul li {
-  height: 60px;
-  background-color: #0a8560;
-  text-align: center;
-  border-top: 2px solid #ff9800;*/
-  transition: background 0.5s;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 2px solid var(--orange);
+  padding: 1rem;
+  transition: all var(--transition-medium);
   display: flex;
   justify-content: center;
   align-items: center;
- 
+  min-height: 50px;
 }
-.acces_rapide a {
-  color: white;
-  font-size: 1.2em;
-}
+
 .acces_rapide ul li:hover {
-  background-color: #ff9800;
+  background: var(--orange);
+  border-top-color: var(--orange-dark);
+  transform: translateX(4px);
+}
+
+.acces_rapide a {
+  color: var(--blanc);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.acces_rapide ul li:hover a {
+  color: var(--blanc);
 }
 
 .vrai_globe {
-  margin-top: 18px;
+  margin-top: 2rem;
   clear: both;
 }
 
 h2 {
-  color: black;
-  font-size: 2.3rem;
-  margin: 0 0 14px 0;
-  letter-spacing: 5px;
-  text-transform: capitalize;
-  background: grey;
+  color: var(--blanc);
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--vert) 0%, var(--vert-dark) 100%);
   text-align: center;
-  height: 100px;
-  border-left: 5px solid black;
-  width: auto;
+  padding: 2rem;
+  border-left: 5px solid var(--orange);
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: flex-start;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
 }
 
 .CRIC2 > p:first-of-type {
-  color: #183233;
-  background: #ffffff;
-  padding: 14px 16px;
+  color: var(--noir);
+  background: var(--blanc);
+  padding: 1.5rem;
   border-radius: 8px;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.CRIC2 h3 {
-  display: inline-block;
-  background: #0a8560;
-  color: #fff;
-  padding: 8px 12px;
-  margin: 10px 0 6px 0;
-  font-size: 1.05rem;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-.CRIC2 h3 + p {
-  background: #fff;
-  padding: 12px 14px;
-  margin: 0 0 12px 0;
-  color: #222;
-  line-height: 1.6;
-}
-
-.CRIC2 h3:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(10, 133, 96, 0.08);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--orange);
 }
 
 @media (max-width: 900px) {
   .CRI {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 1.5rem;
   }
+
   .CRIC2 {
-    padding: 16px;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  .CRIC2 h3 {
-    font-size: 1rem;
-    padding: 7px 10px;
+
+  .organigramme {
+    padding: 1rem;
   }
-  .CRIC2 h3 + p {
-    padding: 10px;
+
+  .organigramme li span {
+    font-size: 11px;
+  }
+
+  .organigramme > ul > li > span {
+    font-size: 16px;
+    width: 150px;
   }
 
   .acces_rapide {
+    padding: 1.5rem;
     margin-left: 0;
-    padding: 14px;
   }
+
+  h2 {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+
   .vrai_globe {
-    grid-template-columns: 1fr;
-    margin-top: 8px;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .CRI {
+    gap: 1rem;
+  }
+
+  .CRIC2 {
+    gap: 1rem;
+  }
+
+  .organigramme {
+    padding: 0.75rem;
+  }
+
+  .organigramme ul {
+    padding-top: 60px;
+  }
+
+  .organigramme li span {
+    font-size: 10px;
+    padding: 8px 6px;
+  }
+
+  .organigramme > ul > li > span {
+    font-size: 14px;
+    width: 120px;
+    padding: 10px 8px;
+  }
+
+  .acces_rapide {
+    padding: 1rem;
+  }
+
+  .acces_rapide p {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .acces_rapide ul li {
+    padding: 0.75rem;
+    min-height: 44px;
+  }
+
+  .acces_rapide a {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    padding: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .vrai_globe {
+    margin-top: 1rem;
   }
 }

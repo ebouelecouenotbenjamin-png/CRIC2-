@@ -1,4 +1,3 @@
-/* Style global pour une meilleure adaptabilité */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -6,11 +5,12 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
-
-/* Style pour le bouton */
 .plus,
 .plus_1,
-.plus_2 {
+.plus_2,
+.plus_3,
+.plus_4,
+.plus_5 {
   background-color: grey;
   color: white;
   border: none;
@@ -23,22 +23,21 @@ body {
 
 .plus:hover,
 .plus_1:hover,
-.plus_2:hover {
+.plus_2:hover,
+.plus_3:hover,
+.plus_4:hover,
+.plus_5:hover {
   background-color: rgb(160, 7, 7);
 }
 
-/* * Le contenu caché par défaut.
- * On utilise 'display: none;'
- */
 .mon-contenu,
 .mon-cont,
-.mon-con {
+.mon-con,
+.mon-co,
+.mon-c,
+.mon {
   display: none;
-
-  /* Garantit l'adaptabilité sur tous les écrans */
   max-width: 100%;
-
-  /* Style pour mieux le voir */
   border: 1px solid #ddd;
   background-color: #f9f9f9;
   padding: 15px;
@@ -46,11 +45,11 @@ body {
   border-radius: 5px;
 }
 
-/* * La classe 'visible' que le JavaScript va ajouter/enlever.
- * C'est elle qui change l'affichage.
- */
 .mon-contenu.visible,
 .mon-cont.visible,
-.mon-con.visible {
+.mon-con.visible,
+.mon-co.visible,
+.mon-c.visible,
+.mon.visible {
   display: block;
 }

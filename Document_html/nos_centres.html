@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +9,21 @@
   <link rel="icon" type="image/png" href="../image_projet/Centre2.png">
   </head>
   <body class="presentation">
+  <!-- Sélecteur de langue -->
+  <div id="lang-switch" aria-label="Langue">
+    <button id="lang-fr">Français</button>
+    <span style="opacity:.5; padding:0 6px;">|</span>
+    <button id="lang-en">English</button>
+  </div>
     <div class="header-flex">
       <div class="logo">
-  <img src="../image_projet/minfisolde.jpg" alt="" />
-        <p>Ministère des Finances</p>
+        <img src="../image_projet/minfisolde.jpg" alt="" />
+        <p data-i18n="ministry">Ministère des Finances</p>
       </div>
-      <h1>Centre Regional des Impôts du Centre 2</h1>
+      <h1 data-i18n="site.title">Centre Regional des Impôts du Centre 2</h1>
       <div class="logo">
-  <img src="../image_projet/dgi.png" alt="" />
-        <p>Direction Générale des Impôts</p>
+        <img src="../image_projet/dgi.png" alt="" />
+        <p data-i18n="dgi">Direction Générale des Impôts</p>
       </div>
     </div>
     <br />
@@ -27,124 +33,121 @@
         <nav>
           <ul>
             <li class="menu-deroulant">
-              <a href="../index.html">CRIC2</a>
+              <a href="../index.html" data-i18n="nav.home">CRIC2</a>
               <ul class="sous-menu">
                 <li>
-                  <a href="../Document_html/le_regional.html">le regional</a>
+                  <a href="../Document_html/le_regional.html" data-i18n="nav.le_regional">le regional</a>
                 </li>
                 <li>
-                  <a href="../Document_html/organigramme.html">Organigramme</a>
+                  <a href="../Document_html/organigramme.html" data-i18n="nav.organigramme">Organigramme</a>
                 </li>
                 <li>
-                  <a href="../Document_html/nos_centres.html">Nos structures</a>
+                  <a href="../Document_html/nos_centres.html" data-i18n="nav.nos_structures">Nos structures</a>
                 </li>
-                <li><a href="../Document_html/mission.html">Missions</a></li>
+                <li><a href="../Document_html/mission.html" data-i18n="nav.missions">Missions</a></li>
               </ul>
             </li>
             <li class="menu-deroulant">
-              <a href="../Document_html/service.html">Services</a>
+              <a href="../Document_html/service.html" data-i18n="nav.services">Services</a>
               <ul class="sous-menu">
                 <li>
                   <a
                     href="http://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx"
-                    >Télédeclaration</a>
+                    data-i18n="nav.teledeclaration">Télédeclaration</a>
                 </li>
                 <li>
                   <a
                     href="https://teledeclaration-dgi.cm/modules/Common/Account/eregistration.aspx?er=empty"
-                    >Immatriculation</a>
+                    data-i18n="nav.immatriculation">Immatriculation</a>
                 </li>
                 <li>
-                  <a href="https://otp.dgi.cm/otp_notification/">Quitance</a>
+                  <a href="https://otp.dgi.cm/otp_notification/" data-i18n="nav.quittance">Quitance</a>
                 </li>
                 <li>
                   <a
                     href="http://fiscalis.dgi.cm/modules/immatriculation/Consultation/listecontribuable.aspx"
-                    >Fichier des contribuables</a>
+                    data-i18n="nav.fichier">Fichier des contribuables</a>
                 </li>
                 <li>
                   <a
                     href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-anr-prod%26redirect_uri%3Dhttps%253A%252F%252Ffanr.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D72f097bfaf1e4017933defba42a3846d%26code_challenge%3Dem8bJjjB7V6rZdZqs1ibD4m0aYML11PPZ7QP5sJtZHE%26code_challenge_method%3DS256%26response_mode%3Dquery"
-                    >Documents fiscaux</a>
+                    data-i18n="service.documents">Documents fiscaux</a>
                 </li>
                 <li>
-                  <a href="https://mesure.dgi.cm:8077/">Authentification ACF</a>
+                  <a href="https://mesure.dgi.cm:8077/" data-i18n="service.acf">Authentification ACF</a>
                 </li>
                 <li>
                   <a
                     href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=DSF"
-                    >DSF</a>
+                    data-i18n="service.dsf">DSF</a>
                 </li>
                 <li>
                   <a
                     href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-beffectif-prod%26redirect_uri%3Dhttps%253A%252F%252Fbef.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D6e137086ff884c5695ce64fb7419fff0%26code_challenge%3Di2fmPIpAJ1vbmjLziSfNn64WS1RL1dCjRyQm6V09ojI%26code_challenge_method%3DS256%26response_mode%3Dquery"
-                    >BEF</a>
+                    data-i18n="service.bef">BEF</a>
                 </li>
                 <li>
                   <a
                     href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=IRPP"
-                    >IRPP</a>
+                    data-i18n="service.irpp">IRPP</a>
                 </li>
               </ul>
             </li>
             <li class="menu-deroulant">
-              <a href="../Document_html/documentations.html">Documentations</a>
+              <a href="../Document_html/documentations.html" data-i18n="nav.documentations">Documentations</a>
               <ul class="sous-menu">
                 <li>
-                  <a href="../Document_html/documentations.html"
+                  <a href="../Document_html/documentations.html" data-i18n="nav.charte">Charte contribuable</a>
                     >Charte contribuable</a>
                 </li>
-                <li><a href="../Document_html/documentations.html">News</a></li>
+                <li><a href="../Document_html/documentations.html" data-i18n="nav.news">News</a></li>
                 <li>
-                  <a href="../Document_html/documentations.html"
-                    >Rapport annuel</a>
+                  <a href="../Document_html/documentations.html" data-i18n="nav.rapport">Rapport annuel</a>
                 </li>
                 <li>
-                  <a href="../Document_html/documentations.html"
-                    >Code général des Impôts</a>
+                  <a href="../Document_html/documentations.html" data-i18n="nav.code">Code général des Impôts</a>
                 </li>
                 <li>
-                  <a href="../Document_html/documentations.html"
-                    >Lois et réglements</a>
+                  <a href="../Document_html/documentations.html" data-i18n="nav.lois">Lois et réglements</a>
                 </li>
                 <li>
-                  <a href="../Document_html/documentations.html">Statistiques</a>
+                  <a href="../Document_html/documentations.html" data-i18n="nav.stats">Statistiques</a>
                 </li>
               </ul>
             </li>
             <li class="menu-deroulant">
-              <a href="../Document_html/tutoriels.html">Tutoriels</a>
+              <a href="../Document_html/tutoriels.html" data-i18n="nav.tutoriels">Tutoriels</a>
             </li>
             <li class="menu-deroulant">
-              <a href="../Document_html/contact.html">Contact</a>
+              <a href="../Document_html/contact.html" data-i18n="nav.contact">Contact</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <h2>STRUCTURES DU CRIC2</h2>
+      <h2 data-i18n="nos_centres.title">STRUCTURES DU CRIC2</h2>
       <div class="CRI">
         <div class="CRIC2">
-          <h3>Les structures du CRIC2</h3>        
-          <p>
+          <h3 data-i18n="nos_centres.title">Les structures du CRIC2</h3>        
+          <p data-i18n="nos_centres.content">
        &nbsp &nbsp  Le CRIC2 comprend six structures opérationnelles, couvrant le flanc ouest du département du Mfoundi, à savoir:
         </p>
-        <h3>CSI-EPA</h3>
-        <p> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant</p>
-        <h3>CIME Yaoundé Ouest</h3>
-        <p> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant</p>
-        <h3>CFLP Yaoundé 2</h3>
-        <p> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant</p>
-        <h3>CFLP Yaoundé 3</h3>
-        <p> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant</p>
-        <h3>CFLP Yaoundé 6</h3>
-        <p> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant</p>
-        <h3>CFLP Yaoundé 7</h3>
-        <p> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant</p>
+        <h3 data-i18n="site.csi_title">CSI-EPA</h3>
+        <p data-i18n="site.csi_desc"> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant</p>
+        <h3 data-i18n="site.cime_title">CIME Yaoundé Ouest</h3>
+        <p data-i18n="site.cime_desc"> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant</p>
+        <h3 data-i18n="site.cflp2_title">CFLP Yaoundé 2</h3>
+        <p data-i18n="site.cflp_desc"> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant</p>
+        <h3 data-i18n="site.cflp3_title">CFLP Yaoundé 3</h3>
+        <p data-i18n="site.cflp_desc"> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant</p>
+        <h3 data-i18n="site.cflp6_title">CFLP Yaoundé 6</h3>
+        <p data-i18n="site.cflp_desc"> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant</p>
+        <h3 data-i18n="site.cflp7_title">CFLP Yaoundé 7</h3>
+        <p data-i18n="site.cflp_desc"> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant</p>
       </div>
       <div class="acces_rapide">
-      <p>Acces rapide</p>
+      <p data-i18n="quick.access">Acces rapide</p>
       <ul>
         <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/eregistration.aspx?er=empty">Immatriculation</a></li>
         <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=IRPP">Déclaration annuelle des revenus des particuliers</a></li>
@@ -160,24 +163,24 @@
       <hr>
       <br>
        <div class="vrai_globe">
-         <div class="structure_globale">
+    <div class="structure_CRIC2">
             <div class="CSI">
-              <p>CSI-EPA</p>
+              <p data-i18n="site.csi_title">CSI-EPA</p>
             </div>
             <div class="CSI">
-              <p>CIME Yaoundé Ouest</p>
+              <p data-i18n="site.cime_title">CIME Yaoundé Ouest</p>
             </div>
             <div class="CSI">
-              <p>CFLP Yaoundé 2</p>
+              <p data-i18n="site.cflp2_title">CFLP Yaoundé 2</p>
             </div>
             <div class="CSI">
-              <p>CFLP Yaoundé 3</p>
+              <p data-i18n="site.cflp3_title">CFLP Yaoundé 3</p>
             </div>
             <div class="CSI">
-              <p>CFLP Yaoundé 6</p>                            
+              <p data-i18n="site.cflp6_title">CFLP Yaoundé 6</p>                            
             </div>
             <div class="CSI">
-              <p>CFLP Yaoundé 7</p>                          
+              <p data-i18n="site.cflp7_title">CFLP Yaoundé 7</p>                          
             </div>
           </div>
           <div class="globe_image">            
@@ -187,13 +190,13 @@
   <footer>
     <div class="pieds">
       <div class="appelle">
-        <p>&copy; 2025 Centre Régional des Impôts du Centre 2 </p>
-        <p>Centre d'appel<br>
+        <p data-i18n="footer.copyright">&copy; 2025 Centre Régional des Impôts du Centre 2 </p>
+        <p data-i18n="footer.call_center">Centre d'appel<br>
          <span> &nbsp 8200</span>
         </p>
       </div>
       <div class="reseaux">
-        <p>Suivez nous</p>
+        <p data-i18n="footer.follow">Suivez nous</p>
         <hr>
         <ul>
           <li>
@@ -229,29 +232,30 @@
         </ul>
       </div>
       <div class="centre">
-        <p>Nos structures</p>
+        <p data-i18n="footer.structures">Nos structures</p>
         <hr>
         <ul>
-          <li><a href="../Document_html/nos_centres.html">CSI EPA</a></li>
-          <li><a href="../Document_html/nos_centres.html">CIME Yaoundé Ouest</a></li>
-          <li><a href="../Document_html/nos_centres.html">CFLP Yaoundé 2</a></li>
-          <li><a href="../Document_html/nos_centres.html">CFLP Yaoundé 3</a></li>
-          <li><a href="../Document_html/nos_centres.html">CFLP Yaoundé 6</a></li>
-          <li><a href="../Document_html/nos_centres.html">CFLP Yaoundé 7</a></li>
+          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.csi">CSI EPA</a></li>
+          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cime">CIME Yaoundé Ouest</a></li>
+          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cflp2">CFLP Yaoundé 2</a></li>
+          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cflp3">CFLP Yaoundé 3</a></li>
+          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cflp6">CFLP Yaoundé 6</a></li>
+          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cflp7">CFLP Yaoundé 7</a></li>
       </div>
       <div class="retour">
-        <p>Acces rapide</p>
+        <p data-i18n="quick.access">Acces rapide</p>
         <hr>
         <ul>
-          <li><a href="../index.html">CRIC2</a></li>
-          <li><a href="../Document_html/service.html">Services</a></li>
-          <li><a href="../Document_html/actualitès.html">Actualité</a></li>
-          <li><a href="../Document_html/documentations.html">Documentations</a>
+          <li><a href="../index.html" data-i18n="nav.home">CRIC2</a></li>
+          <li><a href="../Document_html/service.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="../Document_html/actualitès.html" data-i18n="nav.news">Actualité</a></li>
+          <li><a href="../Document_html/documentations.html" data-i18n="nav.documentations">Documentations</a>
           </li>
         </ul>
       </div>
     </div>
   </footer>
   <script src="../Document_js/CRIC2.js"></script>
+  <script src="../Document_js/i18n.js"></script>
 </body>
 </html>

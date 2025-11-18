@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentations</title>
+    <title>Documentations</title>  
+  <link rel="stylesheet" href="../boutonclic.css">
   <link rel="stylesheet" href="../Document_css/CRIC2.css">
   <link rel="stylesheet" href="../Document_css/documentations.css">
-  <link rel="stylesheet" href="../boutonclic.css">
   <link rel="icon" type="image/png" href="../image_projet/Centre2.png">
   </head>
   <body>
+  <div id="lang-switch" aria-label="Langue">
+    <button id="lang-fr">Français</button>
+    <span style="opacity:.5; padding:0 6px;">|</span>
+    <button id="lang-en">English</button>
+  </div>
     <section class="entete">
       <div class="logo">
         <img src="../image_projet/minfisolde.jpg" alt="" />
-        <p>Ministère des Finances</p>
+        <p data-i18n="ministry">Ministère des Finances</p>
       </div>
-      <h1>Centre Regional des Impôts du Centre 2</h1>
+      <h1 data-i18n="site.title">Centre Regional des Impôts du Centre 2</h1>
       <div class="logo">
   <img src="../image_projet/dgi.png" alt="" />
-        <p>Direction Générale des Impôts</p>
+        <p data-i18n="dgi">Direction Générale des Impôts</p>
       </div>
     </section>
      
@@ -29,205 +34,191 @@
         <nav>
           <ul>
             <li class="menu-deroulant">
-              <a href="../index.html">CRIC2</a>
+              <a href="../index.html" data-i18n="nav.home">CRIC2</a>
               <ul class="sous-menu">
                 <li>
-                  <a href="../Document_html/le_regional.html">le regional</a>
+                  <a href="../Document_html/le_regional.html" data-i18n="nav.le_regional">le regional</a>
                 </li>
                 <li>
-                  <a href="../Document_html/organigramme.html">Organigramme</a>
+                  <a href="../Document_html/organigramme.html" data-i18n="nav.organigramme">Organigramme</a>
                 </li>
                 <li>
-                  <a href="../Document_html/nos_centres.html">Nos structures</a>
+                  <a href="../Document_html/nos_centres.html" data-i18n="nav.nos_structures">Nos structures</a>
                 </li>
-                <li><a href="../Document_html/mission.html">Missions</a></li>
+                <li><a href="../Document_html/mission.html" data-i18n="nav.missions">Missions</a></li>
               </ul>
             </li>
             <li class="menu-deroulant">
-              <a href="../Document_html/service.html">Services</a>
+              <a href="../Document_html/service.html" data-i18n="nav.services">Services</a>
               <ul class="sous-menu">
                 <li>
                   <a
                     href="http://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx"
-                    >Télédeclaration</a>
+                    data-i18n="nav.teledeclaration">Télédeclaration</a>
                 </li>
                 <li>
                   <a
                     href="https://teledeclaration-dgi.cm/modules/Common/Account/eregistration.aspx?er=empty"
-                    >Immatriculation</a>
+                    data-i18n="nav.immatriculation">Immatriculation</a>
                 </li>
                 <li>
-                  <a href="https://otp.dgi.cm/otp_notification/">Quitance</a>
+                  <a href="https://otp.dgi.cm/otp_notification/" data-i18n="nav.quittance">Quitance</a>
                 </li>
                 <li>
                   <a
                     href="http://fiscalis.dgi.cm/modules/immatriculation/Consultation/listecontribuable.aspx"
-                    >Fichier des contribuables</a>
+                    data-i18n="nav.fichier">Fichier des contribuables</a>
                 </li>
                 <li>
                   <a
                     href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-anr-prod%26redirect_uri%3Dhttps%253A%252F%252Ffanr.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D72f097bfaf1e4017933defba42a3846d%26code_challenge%3Dem8bJjjB7V6rZdZqs1ibD4m0aYML11PPZ7QP5sJtZHE%26code_challenge_method%3DS256%26response_mode%3Dquery"
-                    >Documents fiscaux</a>
+                    data-i18n="service.documents">Documents fiscaux</a>
                 </li>
                 <li>
-                  <a href="https://mesure.dgi.cm:8077/">Authentification ACF</a>
+                  <a href="https://mesure.dgi.cm:8077/" data-i18n="service.acf">Authentification ACF</a>
                 </li>
                 <li>
                   <a
                     href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=DSF"
-                    >DSF</a>
+                    data-i18n="service.dsf">DSF</a>
                 </li>
                 <li>
                   <a
                     href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-beffectif-prod%26redirect_uri%3Dhttps%253A%252F%252Fbef.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D6e137086ff884c5695ce64fb7419fff0%26code_challenge%3Di2fmPIpAJ1vbmjLziSfNn64WS1RL1dCjRyQm6V09ojI%26code_challenge_method%3DS256%26response_mode%3Dquery"
-                    >BEF</a>
+                    data-i18n="service.bef">BEF</a>
                 </li>
                 <li>
                   <a
                     href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=IRPP"
-                    >IRPP</a>
+                    data-i18n="service.irpp">IRPP</a>
                 </li>
               </ul>
             </li>
             <li class="menu-deroulant">
-              <a href="../Document_html/documentations.html">Documentations</a>
+              <a href="../Document_html/documentations.html" data-i18n="nav.documentations">Documentations</a>
               <ul class="sous-menu">
                 <li>
                   <a href="../Document_html/documentations.html"
-                    >Charte contribuable</a>
+                    data-i18n="nav.charte">Charte contribuable</a>
                 </li>
-                <li><a href="../Document_html/documentations.html">News</a></li>
+                <li><a href="../Document_html/documentations.html" data-i18n="nav.news">News</a></li>
                 <li>
                   <a href="../Document_html/documentations.html"
-                    >Rapport annuel</a>
-                </li>
-                <li>
-                  <a href="../Document_html/documentations.html"
-                    >Code général des Impôts</a>
+                    data-i18n="nav.rapport">Rapport annuel</a>
                 </li>
                 <li>
                   <a href="../Document_html/documentations.html"
-                    >Lois et réglements</a>
+                    data-i18n="nav.code">Code général des Impôts</a>
                 </li>
                 <li>
-                  <a href="../Document_html/documentations.html">Statistiques</a>
+                  <a href="../Document_html/documentations.html"
+                    data-i18n="nav.lois">Lois et réglements</a>
+                </li>
+                <li>
+                  <a href="../Document_html/documentations.html" data-i18n="nav.stats">Statistiques</a>
                 </li>
               </ul>
             </li>
             <li class="menu-deroulant">
-              <a href="../Document_html/tutoriels.html">Tutoriels</a>
+              <a href="../Document_html/tutoriels.html" data-i18n="nav.tutoriels">Tutoriels</a>
             </li>
             <li class="menu-deroulant">
-              <a href="../Document_html/contact.html">Contact</a>
+              <a href="../Document_html/contact.html" data-i18n="nav.contact">Contact</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <h2>Documentations</h2>
+      <h2 data-i18n="documentations.title">Documentations</h2>
       <div class="CRI">
         <div class="CRIC2">
-          <h3>Documentation du CRIC2</h3>        
-          <p>
-       &nbsp &nbsp Le Centre Régional des Impôts du Centre 2 (CRIC2) est une structure des services déconcentrés de la Direction Générale des Impôts (DGI). Il a été créé à la faveur de l’Arrêté N°000361/MINFI du 19 Juin 2019. Ses services sont situés à Nylon Bastos. Le CRIC2 comprend six structures opérationnelles, couvrant le flanc ouest du département du Mfoundi, à savoir:
+          <h3 data-i18n="documentations.title">Documentation du CRIC2</h3>        
+          <p data-i18n="documentations.content">
+       &nbsp &nbsp Le Centre Régional des Impôts du Centre 2 (CRIC2) est une structure des services déconcentrés de la Direction Générale des Impôts (DGI). Il a été créé à la faveur de l'Arrêté N°000361/MINFI du 19 Juin 2019. Ses services sont situés à Nylon Bastos. Le CRIC2 comprend six structures opérationnelles, couvrant le flanc ouest du département du Mfoundi, à savoir:
         </p>
-        <h3>Charte contribuable</h3>
-        <p> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant 
+        <h3 data-i18n="documentations.charte_title">Charte contribuable</h3>
+        <p data-i18n="documentations.charte_desc"> &nbsp &nbsp Description et texte de la charte du contribuable disponible au CRIC2.<br>on y rencontre les services suivant
         
-        <button class="plus">plus</button>
+        <button class="plus" data-i18n="btn.more">plus</button>
 
         <div class="mon-contenu">
-          <h3>dematerialisation des services du CSI-EPA</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            soluta odit dicta recusandae iusto veritatis illo delectus
-            reprehenderit, sunt modi voluptatibus sequi totam dolore? Architecto
-            distinctio labore nesciunt neque non!
+          <h3 data-i18n="dematerialisation.title">dematerialisation des services du CSI-EPA</h3>
+          <p data-i18n="dematerialisation.desc">
+            Initiatives et outils de dématérialisation pour faciliter les démarches des contribuables.
           </p>
         </div>
       </p>
-        <h3>new</h3>
-        <p> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant  
-      <button class="plus_1">plus</button>
+        <h3 data-i18n="documentations.news_title">new</h3>
+        <p data-i18n="documentations.news_desc"> &nbsp &nbsp Contenu d'actualité et informations récentes publiées par le CRIC2.<br>
+      <button class="plus_1" data-i18n="btn.more">plus</button>
 
         <div class="mon-cont">
-          <h3>dematerialisation des services du CSI-EPA</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            soluta odit dicta recusandae iusto veritatis illo delectus
-            reprehenderit, sunt modi voluptatibus sequi totam dolore? Architecto
-            distinctio labore nesciunt neque non!
+          <h3 data-i18n="dematerialisation.title">dematerialisation des services du CSI-EPA</h3>
+          <p data-i18n="dematerialisation.desc">
+            Initiatives et outils de dématérialisation pour faciliter les démarches des contribuables.
           </p>
         </div>  
   </p>
  
-        <h3>Rapport annuel</h3>
-        <p> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant 
-        <button class="plus_2">plus</button>
+        <h3 data-i18n="documentations.rapport_title">Rapport annuel</h3>
+        <p data-i18n="documentations.rapport_desc"> &nbsp &nbsp Rapports annuels et bilans d'activité du CRIC2.<br>
+        <button class="plus_2" data-i18n="btn.more">plus</button>
 
         <div class="mon-con">
-          <h3>dematerialisation des services du CSI-EPA</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            soluta odit dicta recusandae iusto veritatis illo delectus
-            reprehenderit, sunt modi voluptatibus sequi totam dolore? Architecto
-            distinctio labore nesciunt neque non!
+          <h3 data-i18n="dematerialisation.title">dematerialisation des services du CSI-EPA</h3>
+          <p data-i18n="dematerialisation.desc">
+            Initiatives et outils de dématérialisation pour faciliter les démarches des contribuables.
           </p>
         </div>
         </p>
-        <h3>Statistiques</h3>
-        <p> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant 
-        <button class="plus">plus</button>
+        <h3 data-i18n="documentations.stats_title">Statistiques</h3>
+        <p data-i18n="documentations.stats_desc"> &nbsp &nbsp Données et statistiques fiscales publiées par le CRIC2.<br>
+        <button class="plus_3" data-i18n="btn.more">plus</button>
 
-        <div class="mon-contenu">
-          <h3>dematerialisation des services du CSI-EPA</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            soluta odit dicta recusandae iusto veritatis illo delectus
-            reprehenderit, sunt modi voluptatibus sequi totam dolore? Architecto
-            distinctio labore nesciunt neque non!
+        <div class="mon-co">
+          <h3 data-i18n="dematerialisation.title">dematerialisation des services du CSI-EPA</h3>
+          <p data-i18n="dematerialisation.desc">
+            Initiatives et outils de dématérialisation pour faciliter les démarches des contribuables.
           </p>
         </div>
         </p>
-        <h3>lois et reglémentations</h3>
-        <p> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant 
+        <h3 data-i18n="documentations.lois_title">lois et reglémentations</h3>
+        <p data-i18n="documentations.lois_desc"> &nbsp &nbsp Textes législatifs et règlements applicables.<br>
         
-        <button class="plus">plus</button>
+        <button class="plus_4" data-i18n="btn.more">plus</button>
 
-        <div class="mon-contenu">
-          <h3>dematerialisation des services du CSI-EPA</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            soluta odit dicta recusandae iusto veritatis illo delectus
-            reprehenderit, sunt modi voluptatibus sequi totam dolore? Architecto
-            distinctio labore nesciunt neque non!
+        <div class="mon-c">
+          <h3 data-i18n="dematerialisation.title">dematerialisation des services du CSI-EPA</h3>
+          <p data-i18n="dematerialisation.desc">
+            Initiatives et outils de dématérialisation pour faciliter les démarches des contribuables.
           </p>
+          <h3 data-i18n="date.sep10">le 10 septembre</h3>
+          <p data-i18n="dematerialisation.desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore quia dolorem doloremque dolorum adipisci reprehenderit, a, alias non, hic placeat sunt tempora dignissimos incidunt tenetur saepe? Voluptatibus, pariatur asperiores. Vero?</p>
+          <h3 data-i18n="date.jan15">le 15 Janvier</h3>
+          <p data-i18n="dematerialisation.desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore quia dolorem doloremque dolorum adipisci reprehenderit, a, alias non, hic placeat sunt tempora dignissimos incidunt tenetur saepe? Voluptatibus, pariatur asperiores. Vero?</p>
         </div></p>
-        <h3>Code général des impots</h3>
-        <p> &nbsp &nbsp est une structure des services du CRIC2 il a été crée en .... il est situé à ( localisation du CSI-EPA)<br>on y rencontre les services suivant <button class="plus">plus</button>
+        <h3 data-i18n="documentations.code_title">Code général des impots</h3>
+        <p data-i18n="documentations.code_desc"> &nbsp &nbsp Textes et extraits du Code général des Impôts.<br> <button class="plus_5" data-i18n="btn.more">plus</button>
 
-        <div class="mon-contenu">
-          <h3>dematerialisation des services du CSI-EPA</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            soluta odit dicta recusandae iusto veritatis illo delectus
-            reprehenderit, sunt modi voluptatibus sequi totam dolore? Architecto
-            distinctio labore nesciunt neque non!
+        <div class="mon">
+          <h3 data-i18n="dematerialisation.title">dematerialisation des services du CSI-EPA</h3>
+          <p data-i18n="dematerialisation.desc">
+            Initiatives et outils de dématérialisation pour faciliter les démarches des contribuables.
           </p>
         </div></p>
       </div>
       <div class="acces_rapide">
-      <p>Acces rapide</p>
+      <p data-i18n="quick.access">Acces rapide</p>
       <ul>
-        <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/eregistration.aspx?er=empty">Immatriculation</a></li>
-        <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=IRPP">Déclaration annuelle des revenus des particuliers</a></li>
-        <li><a href="https://mesure.dgi.cm:8077/">Authentification ACF</a></li>
-        <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=DSF">DSF</a></li>
-        <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-beffectif-prod%26redirect_uri%3Dhttps%253A%252F%252Fbef.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D45861e6e8d9749f8a809a3fa1958c2e5%26code_challenge%3DQqXWlrhFdDPx54VX2nzE18pbX-Xx8sk-9OuNAftvSXo%26code_challenge_method%3DS256%26response_mode%3Dquery">Bénéficiere Effectif</a></li>
-        <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-anr-prod%26redirect_uri%3Dhttps%253A%252F%252Ffanr.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D03c3778136c2499da444e8fbac65ed00%26code_challenge%3DBsk2q0G97YrslDxJ3fcmMmxmOYndh2z2XFjpABkOmFM%26code_challenge_method%3DS256%26response_mode%3Dquery">Documents Fiscaux</a></li>
-        <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Ddpr-front-prod%26redirect_uri%3Dhttps%253A%252F%252Fdpr.harmony2.cm%252F%26response_type%3Dcode%26scope%3Dopenid%26state%3D9ca7eadecb764b19bc616c7840122fa6%26code_challenge%3DpFyU0KC__Sz6mtjafK51JuhrboRFdypytxdSr62ZmJ4%26code_challenge_method%3DS256">Déclaration Pré-remplie(DPR)</a></li>
-        <li><a href="https://otp.dgi.cm/">OTP/E-Billing</a></li>
+        <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/eregistration.aspx?er=empty" data-i18n="nav.immatriculation">Immatriculation</a></li>
+        <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=IRPP" data-i18n="service.irpp">Déclaration annuelle des revenus des particuliers</a></li>
+        <li><a href="https://mesure.dgi.cm:8077/" data-i18n="service.acf">Authentification ACF</a></li>
+        <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=DSF" data-i18n="service.dsf">DSF</a></li>
+        <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-beffectif-prod%26redirect_uri%3Dhttps%253A%252F%252Fbef.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D45861e6e8d9749f8a809a3fa1958c2e5%26code_challenge%3DQqXWlrhFdDPx54VX2nzE18pbX-Xx8sk-9OuNAftvSXo%26code_challenge_method%3DS256%26response_mode%3Dquery" data-i18n="service.bef">Bénéficiere Effectif</a></li>
+        <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-anr-prod%26redirect_uri%3Dhttps%253A%252F%252Ffanr.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D03c3778136c2499da444e8fbac65ed00%26code_challenge%3DBsk2q0G97YrslDxJ3fcmMmxmOYndh2z2XFjpABkOmFM%26code_challenge_method%3DS256%26response_mode%3Dquery" data-i18n="service.documents">Documents Fiscaux</a></li>
+        <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Ddpr-front-prod%26redirect_uri%3Dhttps%253A%252F%252Fdpr.harmony2.cm%252F%26response_type%3Dcode%26scope%3Dopenid%26state%3D9ca7eadecb764b19bc616c7840122fa6%26code_challenge%3DpFyU0KC__Sz6mtjafK51JuhrboRFdypytxdSr62ZmJ4%26code_challenge_method%3DS256" data-i18n="service.dpr">Déclaration Pré-remplie(DPR)</a></li>
+        <li><a href="https://otp.dgi.cm/" data-i18n="service.otp">OTP/E-Billing</a></li>
       </ul>
     </div>
     </div>
@@ -237,22 +228,22 @@
 
     <div class="structure_CRIC2">
             <div class="CSI">
-              <p>CSI-EPA</p>
+              <p data-i18n="site.csi_title">CSI-EPA</p>
             </div>
             <div class="CSI">
-              <p>CIME Yaoundé Ouest</p>
+              <p data-i18n="site.cime_title">CIME Yaoundé Ouest</p>
             </div>
             <div class="CSI">
-              <p>CFLP Yaoundé 2</p>
+              <p data-i18n="site.cflp2_title">CFLP Yaoundé 2</p>
             </div>
             <div class="CSI">
-              <p>CFLP Yaoundé 3</p>
+              <p data-i18n="site.cflp3_title">CFLP Yaoundé 3</p>
             </div>
             <div class="CSI">
-              <p>CFLP Yaoundé 6</p>                            
+              <p data-i18n="site.cflp6_title">CFLP Yaoundé 6</p>                            
             </div>
             <div class="CSI">
-              <p>CFLP Yaoundé 7</p>                          
+              <p data-i18n="site.cflp7_title">CFLP Yaoundé 7</p>                          
             </div>
           </div>
           <div class="globe_image">            
@@ -263,13 +254,13 @@
   <footer>
     <div class="pieds">
       <div class="appelle">
-        <p>&copy; 2025 Centre Régional des Impôts du Centre 2 </p>
-        <p>Centre d'appel<br>
+        <p data-i18n="footer.copyright">&copy; 2025 Centre Régional des Impôts du Centre 2 </p>
+        <p data-i18n="footer.call_center">Centre d'appel<br>
          <span> &nbsp 8200</span>
         </p>
       </div>
       <div class="reseaux">
-        <p>Suivez nous</p>
+        <p data-i18n="footer.follow">Suivez nous</p>
         <hr>
         <ul>
           <li>
@@ -279,7 +270,7 @@
                 <path
                   d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.405 24 24 23.408 24 22.674V1.326C24 .592 23.405 0 22.675 0" />
               </svg>
-              Facebook
+              <span data-i18n="social.facebook">Facebook</span>
             </a>
           </li>
           <li>
@@ -289,7 +280,7 @@
                 <path
                   d="M20.447 20.452h-3.554v-5.569c0-1.327-.027-3.037-1.849-3.037-1.851 0-2.132 1.445-2.132 2.939v5.667H9.358V9h3.414v1.561h.049c.476-.9 1.637-1.849 3.372-1.849 3.605 0 4.271 2.372 4.271 5.455v6.285zM5.337 7.433c-1.144 0-2.07-.927-2.07-2.07 0-1.144.926-2.07 2.07-2.07 1.143 0 2.07.926 2.07 2.07 0 1.143-.927 2.07-2.07 2.07zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.549C0 23.229.792 24 1.771 24h20.451C23.2 24 24 23.229 24 22.272V1.723C24 .771 23.2 0 22.225 0z" />
               </svg>
-              LinkedIn
+              <span data-i18n="social.linkedin">LinkedIn</span>
             </a>
           </li>
           <li>
@@ -299,36 +290,37 @@
                 <path
                   d="M20.52 3.48A11.78 11.78 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 1.64 6L0 24l6.26-1.64A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12a11.78 11.78 0 0 0-3.48-8.52zM12 22a9.93 9.93 0 0 1-5.09-1.39l-.36-.21-3.72.97.99-3.62-.23-.37A9.93 9.93 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9s-.44-.14-.62.14-.71.9-.87 1.09-.32.21-.6.07a8.13 8.13 0 0 1-2.39-1.47 8.93 8.93 0 0 1-1.65-2.05c-.17-.28 0-.43.13-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.06-.22-.53-.45-.46-.62-.47h-.53c-.18 0-.46.07-.7.34s-.92.9-.92 2.2.94 2.56 1.07 2.74c.13.18 1.85 2.83 4.5 3.86.63.22 1.12.35 1.5.45.63.16 1.2.14 1.65.09.5-.06 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z" />
               </svg>
-              WhatsApp
+              <span data-i18n="social.whatsapp">WhatsApp</span>
             </a>
           </li>
         </ul>
       </div>
       <div class="centre">
-        <p>Nos structures</p>
+        <p data-i18n="footer.structures">Nos structures</p>
         <hr>
         <ul>
-          <li><a href="../Document_html/nos_centres.html">CSI EPA</a></li>
-          <li><a href="../Document_html/nos_centres.html">CIME Yaoundé Ouest</a></li>
-          <li><a href="../Document_html/nos_centres.html">CFLP Yaoundé 2</a></li>
-          <li><a href="../Document_html/nos_centres.html">CFLP Yaoundé 3</a></li>
-          <li><a href="../Document_html/nos_centres.html">CFLP Yaoundé 6</a></li>
-          <li><a href="../Document_html/nos_centres.html">CFLP Yaoundé 7</a></li>
+          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.csi">CSI EPA</a></li>
+          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cime">CIME Yaoundé Ouest</a></li>
+          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cflp2">CFLP Yaoundé 2</a></li>
+          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cflp3">CFLP Yaoundé 3</a></li>
+          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cflp6">CFLP Yaoundé 6</a></li>
+          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cflp7">CFLP Yaoundé 7</a></li>
       </div>
       <div class="retour">
-        <p>Acces rapide</p>
+        <p data-i18n="quick.access">Acces rapide</p>
         <hr>
         <ul>
-          <li><a href="../index.html">CRIC2</a></li>
-          <li><a href="../Document_html/service.html">Services</a></li>
-          <li><a href="../Document_html/actualitès.html">Actualité</a></li>
-          <li><a href="../Document_html/documentations.html">Documentations</a>
+          <li><a href="../index.html" data-i18n="nav.home">CRIC2</a></li>
+          <li><a href="../Document_html/service.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="../Document_html/actualitès.html" data-i18n="nav.news">Actualité</a></li>
+          <li><a href="../Document_html/documentations.html" data-i18n="nav.documentations">Documentations</a>
           </li>
         </ul>
       </div>
     </div>
   </footer>
   <script src="../Document_js/CRIC2.js"></script>
-   <script src="../boutonclic.js"></script>
+   <script src="../Document_js/documentations.js"></script>
+  <script src="../Document_js/i18n.js"></script>
 </body>
 </html>
