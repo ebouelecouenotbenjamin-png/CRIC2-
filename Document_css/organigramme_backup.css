@@ -1,0 +1,533 @@
+/* ===================================================================
+   ORGANIGRAMME PAGE - DESIGN CASCADE UNIQUE ULTRA-MODERNE
+   Styles premium avec animations avancées et effets visuels
+   Préserve le fond existant avec design attractif mimant CRIC2.css
+   ================================================================= */
+
+.CRI {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.CRIC2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  min-height: 400px;
+}
+
+.org_image {
+  background: url(../image_projet/orga_image.png) no-repeat center/cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  height: 350px;
+}
+
+/* Conteneur principal de l'organigramme - Design Premium */
+.organigramme {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  padding: var(--spacing-xl);
+  background: linear-gradient(135deg, var(--blanc) 0%, var(--gris-light) 100%);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 2px solid var(--gris-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.organigramme::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 75%, rgba(255, 152, 0, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 25%, rgba(10, 133, 96, 0.05) 0%, transparent 50%);
+  animation: float 25s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.organigramme::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--secondary-gradient);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+/* Style de base pour les listes */
+.organigramme ul {
+  padding-top: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+}
+
+.organigramme li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0 2px;
+  list-style: none;
+}
+
+.organigramme li > ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 80px;
+  border-left: 2px solid var(--gris-medium);
+  z-index: 1;
+}
+
+.organigramme li::before,
+.organigramme li::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+/* Ligne verticale montante */
+.organigramme li::before {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 15px;
+  border-left: 2px solid var(--gris-medium);
+}
+
+/* Barre horizontale */
+.organigramme li::after {
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-top: 2px solid var(--gris-medium);
+}
+
+/* Cacher les lignes pour le nœud racine */
+.organigramme > ul > li::before,
+.organigramme > ul > li::after {
+  display: none;
+}
+
+/* Ajuster la barre pour le premier enfant */
+.organigramme li:first-child::after {
+  left: 50%;
+  width: 50%;
+}
+
+/* Ajuster la barre pour le dernier enfant */
+.organigramme li:last-child::after {
+  left: 0;
+  width: 50%;
+}
+
+/* Cacher la barre pour enfant unique */
+.organigramme li:first-child:last-child::after {
+  display: none;
+}
+
+/* Style des nœuds - Design Premium */
+.organigramme li span {
+  display: block;
+  padding: var(--spacing-md) var(--spacing-sm);
+  border: 2px solid var(--gris-medium);
+  border-radius: var(--radius-lg);
+  background: var(--blanc);
+  box-shadow: var(--shadow-md);
+  min-width: 100px;
+  position: relative;
+  z-index: 2;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  height: auto;
+  width: auto;
+  transition: all var(--transition-medium);
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.organigramme li span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  z-index: 1;
+}
+
+.organigramme li span:hover::before {
+  opacity: 1;
+}
+
+.organigramme li span::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg) translateX(-100%);
+  transition: transform 0.6s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.organigramme li span:hover::after {
+  transform: rotate(45deg) translateX(100%);
+}
+
+/* Niveau 1 (Orange Premium) */
+.organigramme > ul > li > span {
+  background: var(--primary-gradient);
+  color: var(--blanc);
+  border-color: var(--vert-dark);
+  font-weight: 800;
+  font-size: 1.1rem;
+  width: 220px;
+  box-shadow: var(--shadow-lg);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 3;
+}
+
+.organigramme > ul > li > span::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 100%);
+}
+
+.organigramme > ul > li > span:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--orange);
+  background: var(--secondary-gradient);
+}
+
+/* Niveau 2 (Vert Premium) */
+.organigramme > ul > li > ul > li > span {
+  background: var(--secondary-gradient);
+  color: var(--blanc);
+  border-color: var(--orange-dark);
+  width: auto;
+  min-width: 120px;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-md);
+  font-weight: 700;
+}
+
+.organigramme > ul > li > ul > li > span:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow bearing var(--  background: linear-gradient(135deg, var fruits 0%, var(--orange) 100%);
+}
+
+/* Niveau 3 et plus (Gris Premium) */
+.organigramme > ul > li > ul > li > ul > li > span {
+  background: linear-gradient(
+    135deg,
+    var(--gris-light) 0%,
+    var(--gris-medium) 100%
+  );
+  color: var(--noir);
+  border-color: var(--gris-dark);
+  font-size: 0.8rem;
+  min-width: 100px;
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+}
+
+.organigramme > ul > li > ul > li > ul > li > span:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(
+    135deg,
+    var(--vert-light) 0%,
+    var(--vert) 100%
+  );
+  color: var(--blanc);
+}
+
+/* Interactivité Premium */
+.organigramme span.collapsible {
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+}
+
+.organigramme span.collapsible::after {
+  content: "−";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--orange);
+  background: var(--blanc);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-medium);
+  z-index: 4;
+}
+
+.organigramme span.collapsible.collapsed::after {
+  content: "+";
+  background: var(--orange);
+  color: var(--blanc);
+}
+
+.organigramme span.collapsible:hover::after {
+  transform: translateY(-50%) scale(1.2);
+  box-shadow: var(--shadow-md);
+}
+
+.organigramme ul.collapsed {
+  display: none;
+  animation: collapseAnimation 0.3s ease-in-out;
+}
+
+.organigramme ul.expanded {
+  display: flex;
+  animation: expandAnimation 0.4s ease-out;
+}
+
+@keyframes collapseAnimation {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+@keyframes expandAnimation {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+.acces_rapide {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--vert) 0%, var(--vert-dark) 100%);
+  border-radius: 12px;
+  align-self: start;
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow-md);
+}
+
+.acces_rapide p {
+  color: var(--blanc);
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.acces_rapide ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.acces_rapide ul li {
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 2px solid var(--orange);
+  padding: 1rem;
+  transition: all var(--transition-medium);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+}
+
+.acces_rapide ul li:hover {
+  background: var(--orange);
+  border-top-color: var(--orange-dark);
+  transform: translateX(4px);
+}
+
+.acces_rapide a {
+  color: var(--blanc);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.acces_rapide ul li:hover a {
+  color: var(--blanc);
+}
+
+.vrai_globe {
+  margin-top: 2rem;
+  clear: both;
+}
+
+main > h2 {
+  color: var(--blanc);
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--vert) 0%, var(--vert-dark) 100%);
+  text-align: center;
+  padding: 2rem;
+  border-left: 5px solid var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  font-weight: 500;
+}
+
+.CRIC2 > p:first-of-type {
+  color: var(--noir);
+  background: var(--blanc);
+  padding: 1.5rem;
+  border-radius: 8px;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--orange);
+}
+
+@media (max-width: 900px) {
+  .CRI {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .CRIC2 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .organigramme {
+    padding: 1rem;
+  }
+
+  .organigramme li span {
+    font-size: 11px;
+  }
+
+  .organigramme > ul > li > span {
+    font-size: 16px;
+    width: 150px;
+  }
+
+  .acces_rapide {
+    padding: 1.5rem;
+    margin-left: 0;
+  }
+
+  main > h2 {
+    font-size: 1rem;
+    padding: 1.5rem;
+    font-weight: 550;
+  }
+
+  .vrai_globe {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .CRI {
+    gap: 1rem;
+  }
+
+  .CRIC2 {
+    gap: 1rem;
+  }
+
+  .organigramme {
+    padding: 0.75rem;
+  }
+
+  .organigramme ul {
+    padding-top: 60px;
+  }
+
+  .organigramme li span {
+    font-size: 10px;
+    padding: 8px 6px;
+  }
+
+  .organigramme > ul > li > span {
+    font-size: 14px;
+    width: 120px;
+    padding: 10px 8px;
+  }
+
+  .acces_rapide {
+    padding: 1rem;
+  }
+
+  .acces_rapide p {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .acces_rapide ul li {
+    padding: 0.75rem;
+    min-height: 44px;
+  }
+
+  .acces_rapide a {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    padding: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .vrai_globe {
+    margin-top: 1rem;
+  }
+}

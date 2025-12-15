@@ -1,95 +1,462 @@
 /* ===================================================================
-   PRÉSENTATION CRIC2 PAGE - Styles modernes et responsifs
-   Basé sur le système de variables et design de CRIC2.css
+   PRÉSENTATION CRIC2 PAGE - DESIGN MODERNE 2025
+   Style unifié avec organigramme.css
+   Design premium avec animations avancées et effets visuels
    ================================================================= */
 
 .CRI {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
+  position: relative;
+  padding: 3rem 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(248, 250, 252, 0.9) 100%
+  );
+  border-radius: var(--radius-xl);
+  border: 2px solid rgba(255, 152, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.CRI::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+      circle at 25% 75%,
+      rgba(255, 152, 0, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 25%,
+      rgba(10, 133, 96, 0.05) 0%,
+      transparent 50%
+    );
+  animation: float 25s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.CRI > * {
+  position: relative;
+  z-index: 2;
 }
 
 .CRIC2 {
-  background: linear-gradient(135deg, var(--blanc) 0%, var(--gris-light) 100%);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--gris-medium);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  min-height: 600px;
+  align-items: start;
 }
 
+/* Image Présentation - Design Premium Amélioré */
+.org_image {
+  position: relative;
+  background: url(../image_projet/CRI_batiment.png) no-repeat center/cover;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  height: 450px;
+  margin-bottom: 2rem;
+  border: 2px solid rgba(255, 152, 0, 0.12);
+}
+
+.org_image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 133, 96, 0.12) 0%,
+    transparent 50%,
+    rgba(255, 152, 0, 0.12) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.org_image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+      circle at 25% 75%,
+      rgba(255, 152, 0, 0.06) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 75% 25%,
+      rgba(10, 133, 96, 0.06) 0%,
+      transparent 60%
+    );
+  animation: float 30s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Section Description - Design Premium Ultra Moderne */
 .CRIC2 > p:first-of-type {
+  position: relative;
   color: var(--noir);
-  background: var(--blanc);
-  padding: 1.5rem;
-  border-radius: 8px;
-  line-height: 1.75;
-  margin-bottom: 1.5rem;
-  border-left: 4px solid var(--orange);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(248, 250, 252, 0.92) 100%
+  );
+  padding: 2.5rem 3rem;
+  border-radius: var(--radius-xl);
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
+  border: 2px solid rgba(255, 152, 0, 0.18);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  font-weight: 500;
+  backdrop-filter: blur(15px);
+  overflow: hidden;
 }
 
+.CRIC2 > p:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--orange) 0%, var(--vert) 100%);
+  border-radius: var(--radius-xl) 0 0 var(--radius-xl);
+  z-index: 2;
+}
+
+.CRIC2 > p:first-of-type::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+    circle at 85% 15%,
+    rgba(255, 152, 0, 0.05) 0%,
+    transparent 60%
+  );
+  animation: float 30s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.CRIC2 > p:first-of-type::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+    circle at 85% 15%,
+    rgba(255, 152, 0, 0.05) 0%,
+    transparent 50%
+  );
+  animation: float 25s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Sections h3 - Design Premium */
 .CRIC2 h3 {
-  display: inline-block;
+  position: relative;
   color: var(--blanc);
-  background: var(--vert);
-  padding: 10px 16px;
-  margin: 1rem 0 0.75rem 0;
-  font-size: 1.1rem;
-  transition: all var(--transition-medium);
-  font-weight: 700;
-  border-radius: 6px;
+  background: var(--primary-gradient);
+  padding: 1.2rem 2rem;
+  margin: 2rem 0 1rem 0;
+  font-size: 1.2rem;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-weight: 800;
+  border-radius: var(--radius-lg);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 10px 30px rgba(10, 133, 96, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.CRIC2 h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  z-index: 1;
+}
+
+.CRIC2 h3:hover::before {
+  opacity: 1;
+}
+
+.CRIC2 h3::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg) translateX(-100%);
+  transition: transform 0.6s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.CRIC2 h3:hover::after {
+  transform: rotate(45deg) translateX(100%);
 }
 
 .CRIC2 h3:hover {
-  transform: translateY(-4px);
-  background: var(--vert-dark);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(10, 133, 96, 0.3),
+    0 0 0 2px rgba(255, 152, 0, 0.3);
+  background: var(--secondary-gradient);
 }
 
+/* Contenu après h3 */
 .CRIC2 h3 + p {
-  background: var(--blanc);
-  padding: 1rem 1.25rem;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(248, 250, 252, 0.95) 100%
+  );
+  padding: 1.5rem 2rem;
   margin: 0 0 1.5rem 0;
   color: var(--noir);
-  line-height: 1.75;
-  border-radius: 6px;
-  border-left: 3px solid var(--gris-medium);
+  line-height: 1.8;
+  border-radius: var(--radius-lg);
+  border-left: 5px solid var(--orange);
+  border: 2px solid rgba(255, 152, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
-.CRIC2::before {
+.CRIC2 h3 + p::before {
   content: "";
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 4px;
-  width: 100px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, var(--vert) 0%, var(--orange) 100%);
-  margin-bottom: 1.5rem;
+  background: var(--secondary-gradient);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
-.vrai_globe {
-  margin-top: 2rem;
-  clear: both;
+/* Paragraphes avec image */
+.CRIC2 .paragr {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(248, 250, 252, 0.95) 100%
+  );
+  padding: 2rem;
+  margin: 2rem 0;
+  color: var(--noir);
+  line-height: 1.8;
+  border-radius: var(--radius-xl);
+  border: 2px solid rgba(255, 152, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
+.paragr .imgtbat {
+  position: relative;
+  background: url(../image_projet/CRI_batiment.png) center/cover;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 300px;
+  box-shadow: 0 10px 30px rgba(10, 133, 96, 0.2);
+  border: 2px solid rgba(255, 152, 0, 0.1);
+}
+
+.paragr .imgtbat::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 133, 96, 0.1) 0%,
+    transparent 50%,
+    rgba(255, 152, 0, 0.1) 100%
+  );
+  pointer-events: none;
+}
+
+/* Titre Principal - Design Hero Ultra Moderne */
+main > h2 {
+  position: relative;
+  color: var(--blanc);
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin: 0 0 2.5rem 0;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 950;
+  text-align: center;
+  padding: 3rem 4rem;
+  background: linear-gradient(
+    135deg,
+    var(--vert) 0%,
+    var(--vert-dark) 40%,
+    var(--orange) 100%
+  );
+  border-radius: var(--radius-xl);
+  box-shadow: 0 25px 50px rgba(10, 133, 96, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  word-spacing: 0.2em;
+  line-height: 1.2;
+}
+
+main > h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 100%
+  );
+  animation: shimmer 3s infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+main > h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 152, 0, 0.08) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(10, 133, 96, 0.08) 0%,
+      transparent 60%
+    );
+  animation: float 25s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Accès Rapide - Design Premium */
 .acces_rapide {
   width: 100%;
   box-sizing: border-box;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, var(--vert) 0%, var(--vert-dark) 100%);
-  border-radius: 12px;
+  padding: var(--spacing-lg);
+  background: linear-gradient(
+    135deg,
+    var(--vert) 0%,
+    var(--vert-dark) 50%,
+    var(--orange) 100%
+  );
+  border-radius: var(--radius-xl);
   align-self: start;
   position: relative;
   z-index: 1;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 15px 35px rgba(10, 133, 96, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .acces_rapide p {
   color: var(--blanc);
-  font-size: 1.25rem;
-  margin: 0 0 1rem 0;
-  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
 }
 
 .acces_rapide ul {
@@ -99,20 +466,31 @@
 }
 
 .acces_rapide ul li {
-  background: rgba(255, 255, 255, 0.1);
-  border-top: 2px solid var(--orange);
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
   padding: 1rem;
-  transition: all var(--transition-medium);
+  margin-bottom: 0.8rem;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50px;
+  min-height: 55px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
 }
 
 .acces_rapide ul li:hover {
-  background: var(--orange);
-  border-top-color: var(--orange-dark);
-  transform: translateX(4px);
+  background: linear-gradient(
+    135deg,
+    var(--orange) 0%,
+    var(--orange-dark) 100%
+  );
+  border-color: var(--orange-dark);
+  transform: translateX(8px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4),
+    0 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
 .acces_rapide a {
@@ -126,21 +504,43 @@
   color: var(--blanc);
 }
 
-h2 {
-  color: var(--blanc);
-  font-size: clamp(1.5rem, 5vw, 2.3rem);
-  margin: 0 0 1.5rem 0;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  background: linear-gradient(135deg, var(--vert) 0%, var(--vert-dark) 100%);
-  text-align: center;
-  padding: 2rem;
-  border-left: 5px solid var(--orange);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  border-radius: 8px;
-  box-shadow: var(--shadow-md);
+.vrai_globe {
+  margin-top: 2rem;
+  clear: both;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .CRIC2 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .org_image {
+    height: 300px;
+  }
+
+  .paragr {
+    grid-template-columns: 1fr !important;
+  }
+
+  .paragr .imgtbat {
+    height: 250px;
+  }
+
+  main > h2 {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  .CRIC2 h3 {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .acces_rapide {
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 900px) {
@@ -150,16 +550,45 @@ h2 {
   }
 
   .CRIC2 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .org_image {
+    height: 250px;
+    margin-bottom: 1.5rem;
+  }
+
+  .paragr {
+    grid-template-columns: 1fr !important;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .paragr .imgtbat {
+    height: 200px;
+  }
+
+  main > h2 {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .CRIC2 > p:first-of-type {
+    font-size: 1rem;
     padding: 1.5rem;
   }
 
   .CRIC2 h3 {
-    font-size: 1.05rem;
-    padding: 8px 12px;
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 1.5rem 0 0.75rem 0;
   }
 
   .CRIC2 h3 + p {
-    padding: 0.75rem 1rem;
+    padding: 1.25rem 1.5rem;
+    font-size: 0.95rem;
   }
 
   .acces_rapide {
@@ -167,13 +596,21 @@ h2 {
     margin-left: 0;
   }
 
-  h2 {
-    font-size: 1.5rem;
-    padding: 1.5rem;
+  .acces_rapide p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .acces_rapide ul li {
+    padding: 0.75rem;
+    min-height: 50px;
+  }
+
+  .acces_rapide a {
+    font-size: 0.95rem;
   }
 
   .vrai_globe {
-    grid-template-columns: 1fr;
     margin-top: 1rem;
   }
 }
@@ -184,22 +621,46 @@ h2 {
   }
 
   .CRIC2 {
-    padding: 1rem;
+    gap: 1rem;
   }
 
-  .CRIC2 > p:first-of-type {
-    padding: 1rem;
+  .org_image {
+    height: 200px;
     margin-bottom: 1rem;
   }
 
+  .paragr {
+    padding: 1rem !important;
+    gap: 1rem;
+  }
+
+  .paragr .imgtbat {
+    height: 180px;
+  }
+
+  main > h2 {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .CRIC2 > p:first-of-type {
+    font-size: 0.95rem;
+    padding: 1.25rem;
+    line-height: 1.6;
+  }
+
   .CRIC2 h3 {
-    font-size: 1rem;
-    padding: 8px 12px;
-    margin: 0.75rem 0 0.5rem 0;
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+    margin: 1rem 0 0.5rem 0;
+    letter-spacing: 0.5px;
   }
 
   .CRIC2 h3 + p {
-    padding: 0.75rem;
+    padding: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 1rem;
   }
 
@@ -208,26 +669,22 @@ h2 {
   }
 
   .acces_rapide p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 0.75rem;
-  }
-
-  .acces_rapide ul li {
-    padding: 0.75rem;
-    min-height: 44px;
-  }
-
-  .acces_rapide a {
-    font-size: 0.9rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-    padding: 1rem;
     letter-spacing: 0.5px;
   }
 
+  .acces_rapide ul li {
+    padding: 0.6rem;
+    min-height: 44px;
+    margin-bottom: 0.6rem;
+  }
+
+  .acces_rapide a {
+    font-size: 0.85rem;
+  }
+
   .vrai_globe {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
   }
 }

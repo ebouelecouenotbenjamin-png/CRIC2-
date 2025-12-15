@@ -3,218 +3,536 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutoriels</title>
-  <link rel="stylesheet" href="../Document_css/CRIC2.css">
-  <link rel="stylesheet" href="../Document_css/tutoriels.css">
-  <link rel="icon" type="image/png" href="../image_projet/Centre2.png">
-  </head>
-  <body>
-  <!-- Sélecteur de langue -->
-  <div id="lang-switch" aria-label="Langue">
-    <button id="lang-fr">Français</button>
-    <span style="opacity:.5; padding:0 6px;">|</span>
-    <button id="lang-en">English</button>
-  </div>
-  <section class="entete">
-<div class="logo">
-      <img src="../image_projet/minfisolde.jpg" alt="">
-      <p data-i18n="ministry">Ministère des Finances</p>
-    </div>
-    <h1 data-i18n="site.title">Centre Regional des Impôts du Centre 2</h1>
-    <div class="logo">
-      <img src="../image_projet/dgi.png" alt="">
-      <p data-i18n="dgi">Direction Générale des Impôts</p>
-    </div>
-  </section>
-    
-   <br>
-  <br>
-<header>
-    <div class="navigation_header">
-      <nav>
-        <ul>
-          <li class="menu-deroulant"><a href="../index.html" data-i18n="nav.home">CRIC2</a>
-            <ul class="sous-menu">
-              <li><a href="../Document_html/le_regional.html" data-i18n="nav.le_regional">le regional</a></li>
-              <li><a href="../Document_html/organigramme.html" data-i18n="nav.organigramme">Organigramme</a></li>
-              <li><a href="../Document_html/nos_centres.html" data-i18n="nav.nos_structures">Nos structures</a></li>
-              <li><a href="../Document_html/mission.html" data-i18n="nav.missions">Missions</a></li>
-            </ul>
-          </li>
-          <li class="menu-deroulant"><a href="../Document_html/service.html" data-i18n="nav.services">Services</a>
-            <ul class="sous-menu">
-              <li><a href="http://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx" data-i18n="nav.teledeclaration">Télédeclaration</a></li>
-              <li><a
-                href="https://teledeclaration-dgi.cm/modules/Common/Account/eregistration.aspx?er=empty" data-i18n="nav.immatriculation">Immatriculation</a>
-              </li>
-              <li><a href="https://otp.dgi.cm/otp_notification/" data-i18n="nav.quittance">Quitance</a></li>
-              <li><a href="http://fiscalis.dgi.cm/modules/immatriculation/Consultation/listecontribuable.aspx" data-i18n="nav.fichier">Fichier des contribuables</a></li>
-              <li><a
-                href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-anr-prod%26redirect_uri%3Dhttps%253A%252F%252Ffanr.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D72f097bfaf1e4017933defba42a3846d%26code_challenge%3Dem8bJjjB7V6rZdZqs1ibD4m0aYML11PPZ7QP5sJtZHE%26code_challenge_method%3DS256%26response_mode%3Dquery" data-i18n="service.documents">Documents
-                fiscaux</a></li>
-              <li><a href="https://mesure.dgi.cm:8077/" data-i18n="service.acf">Authentification ACF</a></li>
-              <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=DSF" data-i18n="service.dsf">DSF</a></li>
-              <li><a
-                href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-beffectif-prod%26redirect_uri%3Dhttps%253A%252F%252Fbef.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D6e137086ff884c5695ce64fb7419fff0%26code_challenge%3Di2fmPIpAJ1vbmjLziSfNn64WS1RL1dCjRyQm6V09ojI%26code_challenge_method%3DS256%26response_mode%3Dquery" data-i18n="service.bef">BEF</a></li>
-              <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=IRPP" data-i18n="service.irpp">IRPP</a></li>
-            </ul>
-          </li>
-          <li class="menu-deroulant"><a href="../Document_html/documentations.html" data-i18n="nav.documentations">Documentations</a>
-            <ul class="sous-menu">
-              <li><a href="../Document_html/documentations.html" data-i18n="nav.charte">Charte contribuable</a></li>
-              <li><a href="../Document_html/documentations.html" data-i18n="nav.news">News</a></li>
-              <li><a href="../Document_html/documentations.html" data-i18n="nav.rapport">Rapport annuel</a></li>
-              <li><a href="../Document_html/documentations.html" data-i18n="nav.code">Code général des Impôts</a></li>
-              <li><a href="../Document_html/documentations.html" data-i18n="nav.lois">Lois et réglements</a></li>
-              <li><a href="../Document_html/documentations.html" data-i18n="nav.stats">Statistiques</a></li>
-            </ul>
-          </li>
-          <li class="menu-deroulant"><a href="../Document_html/tutoriels.html" data-i18n="nav.tutoriels">Tutoriels</a>
-          </li>
-          <li class="menu-deroulant"><a href="../Document_html/contact.html" data-i18n="nav.contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-    <main>
-      <h2 data-i18n="tutoriels.title">TUTORIELS</h2>
-      <section class="tuto_section1">
-        <div class="tuto_corps">
-          <h3 data-i18n="tutoriels.title">Guide d'utilisation des services en ligne</h3>        
-          <p data-i18n="tutoriels.content">
-       &nbsp &nbsp Dans le but d'apporter un accompagnement aux contribuables le CRIC2 a mis en ligne un ensemble de guide pour faciliter la tache aux contribuables voulant remplir leurs obligations administratives entre autre le CRIC2 propose ces guides sur 3 formats: PDF, video et Powerpoint.
-        </p>
-          <div class="tous_les_tuto">
-            <div class="tuto_ima">
-              <div class="image_ima">            
-              </div>
-            <div class="rubrique_ima">
-            <h3 data-i18n="tutoriels.guide_immatriculation_title">Guide de l'immatriculation en ligne</h3>
-            <ul>
-              <li><a href="version" data-i18n="tutoriels.pdf">PDF</a></li>
-              <li><a href="version" data-i18n="tutoriels.video">Vidéo</a></li>
-              <li><a href="version" data-i18n="tutoriels.ppt">Powerpoint</a></li>
-            </ul>
-            </div>
-        </div>
-        <div class="tuto_IRPP">
-          <div class="image_IRPP">            
-          </div>
-          <div class="rubrique_IRPP">
-            <h3 data-i18n="tutoriels.guide_irpp_title">Guide de la Déclaration IRPP</h3>
-            <ul>
-              <li><a href="version" data-i18n="tutoriels.pdf">PDF</a></li>
-              <li><a href="version" data-i18n="tutoriels.video">Vidéo</a></li>
-              <li><a href="version" data-i18n="tutoriels.ppt">Powerpoint</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="tuto_BEF">
-          <div class="image_BEF">
-          </div>
-          <div class="rubrique_BEF">
-            <h3 data-i18n="tutoriels.guide_bef_title">Guide de la Déclaration BEF</h3>
-            <ul>
-              <li><a href="version" data-i18n="tutoriels.pdf">PDF</a></li>
-              <li><a href="version" data-i18n="tutoriels.video">Vidéo</a></li>
-              <li><a href="version" data-i18n="tutoriels.ppt">Powerpoint</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="tuto_DSF">
-          <div class="image_DSF">
-            
-          </div>
-          <div class="rubrique_DSF">
-            <h3 data-i18n="tutoriels.guide_dsf_title">Guide de la Télédéclaration DSF</h3>
-            <ul>
-              <li><a href="../fichiers_media/guide_utilisation_desf.pdf" download data-i18n="tutoriels.pdf">PDF</a></li>
-              <li><a href="../fichiers_media/video_dsf.mp4" download data-i18n="tutoriels.video">Vidéo</a></li>
-              <li><a href="version" data-i18n="tutoriels.ppt">Powerpoint</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="tuto_docf">
-          <div class="image_docf">
-            
-          </div>
-            <div class="rubrique_docf">
-            <h3 data-i18n="tutoriels.guide_docf_title">guide pour générer un document fiscal</h3>
-            <ul>
-              <li><a href="version" data-i18n="tutoriels.pdf">PDF</a></li>
-              <li><a href="version" data-i18n="tutoriels.video">Vidéo</a></li>
-              <li><a href="version" data-i18n="tutoriels.ppt">Powerpoint</a></li>
-            </ul>
-          </div>
-        </div>
-    
-        <div class="tuto_tim">
-          <div class="image_tim">
-          </div>
-            <div class="rubrique_tim">
-            <h3 data-i18n="tutoriels.guide_tim_title">Guide de la Télédéclaration des Timbres</h3>
-            <ul>
-              <li><a href="version" data-i18n="tutoriels.pdf">PDF</a></li>
-              <li><a href="version" data-i18n="tutoriels.video">Vidéo</a></li>
-              <li><a href="version" data-i18n="tutoriels.ppt">Powerpoint</a></li>
-            </ul>
-          </div>
-        </div>       
-        </div>
-       </div>
-      <div class="acces_rapide">
-      <p data-i18n="quick.access">Acces rapide</p>
-      <ul>
-        <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/eregistration.aspx?er=empty" data-i18n="nav.immatriculation">Immatriculation</a></li>
-        <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=IRPP" data-i18n="service.irpp">Déclaration annuelle des revenus des particuliers</a></li>
-        <li><a href="https://mesure.dgi.cm:8077/" data-i18n="service.acf">Authentification ACF</a></li>
-        <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=DSF" data-i18n="service.dsf">DSF</a></li>
-        <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-beffectif-prod%26redirect_uri%3Dhttps%253A%252F%252Fbef.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D45861e6e8d9749f8a809a3fa1958c2e5%26code_challenge%3DQqXWlrhFdDPx54VX2nzE18pbX-Xx8sk-9OuNAftvSXo%26code_challenge_method%3DS256%26response_mode%3Dquery" data-i18n="service.bef">Bénéficiere Effectif</a></li>
-        <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-anr-prod%26redirect_uri%3Dhttps%253A%252F%252Ffanr.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D03c3778136c2499da444e8fbac65ed00%26code_challenge%3DBsk2q0G97YrslDxJ3fcmMmxmOYndh2z2XFjpABkOmFM%26code_challenge_method%3DS256%26response_mode%3Dquery" data-i18n="service.documents">Documents Fiscaux</a></li>
-        <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Ddpr-front-prod%26redirect_uri%3Dhttps%253A%252F%252Fdpr.harmony2.cm%252F%26response_type%3Dcode%26scope%3Dopenid%26state%3D9ca7eadecb764b19bc616c7840122fa6%26code_challenge%3DpFyU0KC__Sz6mtjafK51JuhrboRFdypytxdSr62ZmJ4%26code_challenge_method%3DS256" data-i18n="service.dpr">Déclaration Pré-remplie(DPR)</a></li>
-        <li><a href="https://otp.dgi.cm/" data-i18n="service.otp">OTP/E-Billing</a></li>
-      </ul>
-    </div>
-      </section>        
-      <hr>
-      <br>
-       <section class="S_CRIC2">
-          <div class="structure_CRIC2">
-            <div class="CSI">
-              <p data-i18n="site.csi_title">CSI-EPA</p>
-            </div>
-            <div class="CSI">
-              <p data-i18n="site.cime_title">CIME Yaoundé Ouest</p>
-            </div>
-            <div class="CSI">
-              <p data-i18n="site.cflp2_title">CFLP Yaoundé 2</p>
-            </div>
-            <div class="CSI">
-              <p data-i18n="site.cflp3_title">CFLP Yaoundé 3</p>
-            </div>
-            <div class="CSI">
-              <p data-i18n="site.cflp6_title">CFLP Yaoundé 6</p>                            
-            </div>
-            <div class="CSI">
-              <p data-i18n="site.cflp7_title">CFLP Yaoundé 7</p>                          
-            </div>
-          </div>
-          <div class="structure_image">         
-        </div>
-       </section>
+    <title>Tutoriels - CRIC2</title>
+    <link rel="stylesheet" href="../Document_css/CRIC2.css">
+    <link rel="stylesheet" href="../Document_css/tutoriels.css">
+    <link rel="icon" type="image/png" href="../image_projet/Centre2.png">
+  <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.initialize({
+        api_key: 'wg_4a8b880bf0f3ccc2c0d2d302d38ad49b8'
         
+    });
+</script>
+ </head>
+ <body>
+  <div class="custom-weglot-wrapper">
+    <a href="#" id="wl-custom-fr" class="wl-custom-link" onclick="Weglot.switchTo('fr'); return false;">French</a>
+    <span class="wl-separator">|</span>
+    <a href="#" id="wl-custom-en" class="wl-custom-link" onclick="Weglot.switchTo('en'); return false;">English</a>
+</div>
+    <section class="entete">
+      <div class="logo">
+        <img src="../image_projet/minfisolde.jpg" alt="" />
+        <p>Ministère des Finances</p>
+      </div>
+      <h1>Centre Regional des Impôts du Centre 2</h1>
+      <div class="logo">
+        <img src="../image_projet/dgi.png" alt="" />
+        <p>Direction Générale des Impôts</p>
+      </div>
+    </section>
+    <br />
+    <br />
+    <header>
+      <div class="navigation_header">
+        <nav>
+          <ul>
+            <li class="menu-deroulant">
+              <a href="../index.html">CRIC2</a>
+              <ul class="sous-menu">
+                <li>
+                  <a
+                    href="../Document_html/le_regional.html"
+                   
+                    >le regional</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../Document_html/organigramme.html"
+                   
+                    >Organigramme</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../Document_html/mission.html"
+                   
+                    >Missions</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../Document_html/nos_centres.html"
+                   
+                    >Nos structures</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="menu-deroulant">
+              <a href="../Document_html/service.html"
+                >Services</a
+              >
+              <ul class="sous-menu">
+                <li>
+                  <a
+                    href="https://teledeclaration-dgi.cm/modules/Common/Account/eregistration.aspx?er=empty"
+                    target="_blank"
+                   
+                    >Immatriculation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx"
+                    target="_blank"
+                   
+                    >Télédeclaration</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-anr-prod%26redirect_uri%3Dhttps%253A%252F%252Ffanr.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D72f097bfaf1e4017933defba42a3846d%26code_challenge%3Dem8bJjjB7V6rZdZqs1ibD4m0aYML11PPZ7QP5sJtZHE%26code_challenge_method%3DS256%26response_mode%3Dquery"
+                    >Documents fiscaux</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=DSF"
+                    >DSF</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-beffectif-prod%26redirect_uri%3Dhttps%253A%252F%252Fbef.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D6e137086ff884c5695ce64fb7419fff0%26code_challenge%3Di2fmPIpAJ1vbmjLziSfNn64WS1RL1dCjRyQm6V09ojI%26code_challenge_method%3DS256%26response_mode%3Dquery"
+                    >BEF</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=IRPP"
+                    >IRPP</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://otp.dgi.cm/otp_notification/"
+                   
+                    >Quitance</a
+                  >
+                </li>
+                <li>
+                  <a href="https://mesure.dgi.cm:8077/"
+                    >Authentification Documents</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="menu-deroulant">
+              <a
+                href="../Document_html/documentations.html"
+               
+                >Documentations</a
+              >
+              <ul class="sous-menu">
+                <li>
+                  <a
+                    href="../Document_html/documentations.html"
+                   
+                    >Charte contribuable</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../Document_html/documentations.html"
+                   
+                    >News</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../Document_html/documentations.html"
+                   
+                    >Rapport annuel</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../Document_html/documentations.html"
+                   
+                    >Statistiques</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../Document_html/documentations.html"
+                   
+                    >Lois et réglements</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../Document_html/documentations.html"
+                   
+                    >Code général des Impôts</a
+                  >
+                </li>
+                <li class="menu-deroulant">
+                  <a
+                    href="../Document_html/tutoriels.html"
+                   
+                    >Tutoriels</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-deroulant">
+              <a href="../Document_html/contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="tuto-hero">
+      <div class="hero-background"></div>
+      <div class="hero-gradient"></div>
+      <div class="hero-particles"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="badge-glow"></div>
+            <span class="badge-text">🎓 Guides Pratiques</span>
+          </div>
+          <h1 class="hero-title">Tutoriels & Guides</h1>
+          <p class="hero-subtitle">Maîtrisez les services fiscaux du CRIC2 avec nos tutoriels détaillés, vidéos explicatives et guides pratiques en PDF.</p>
+          <div class="hero-buttons">
+            <a href="#tuto-section" class="btn btn-primary">Voir les tutoriels</a>
+            <a href="../Document_html/contact.html" class="btn btn-secondary">Questions ?</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="tuto-icon">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <h3>Tutoriels Vidéos</h3>
+            <p>Guides vidéos pas à pas pour chaque service</p>
+          </div>
+          <div class="hero-card" style="animation-delay: 1s;">
+            <div class="tuto-icon">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14,2 14,8 20,8"/>
+                <line x1="12" y1="13" x2="12" y2="19"/>
+                <line x1="9" y1="16" x2="15" y2="16"/>
+              </svg>
+            </div>
+            <h3>Guides PDF</h3>
+            <p>Manuels téléchargeables et imprimables</p>
+          </div>
+          <div class="hero-glow-orb"></div>
+        </div>
+      </div>
+    </section>
+    <main>
+
+      <section class="tuto_section1" id="tuto-section">
+        <div class="tuto_corps">
+          <h3>Nos Tutoriels</h3>
+          <p>Découvrez nos guides complets pour chaque service fiscal</p>
+        </div>
+        <div class="tous_les_tuto">
+            <!-- Carte Immatriculation -->
+            <div class="tuto-card tuto_ima">
+              <div class="card-header">
+                <div class="image_ima"></div>
+                <div class="card-badge">Nouveau</div>
+              </div>
+              <div class="card-content">
+                <h3>Guide de l'immatriculation en ligne</h3>
+                <p>Apprenez à immatriculer votre entreprise en quelques étapes simples</p>
+                <div class="card-actions">
+                  <a href="version" class="btn-format btn-pdf" download>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14,2 14,8 20,8"/>
+                    </svg>
+                    PDF
+                  </a>
+                  <a href="version" class="btn-format btn-video">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="5,3 19,12 5,21"/>
+                    </svg>
+                    Vidéo
+                  </a>
+                  <a href="version" class="btn-format btn-ppt">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                      <line x1="8" y1="21" x2="16" y2="21"/>
+                      <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    PPT
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carte IRPP -->
+            <div class="tuto-card tuto_IRPP">
+              <div class="card-header">
+                <div class="image_IRPP"></div>
+                <div class="card-badge">Populaire</div>
+              </div>
+              <div class="card-content">
+                <h3>Guide de la Déclaration IRPP</h3>
+                <p>Déclarez vos revenus en toute simplicité avec notre guide complet</p>
+                <div class="card-actions">
+                  <a href="version" class="btn-format btn-pdf" download>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14,2 14,8 20,8"/>
+                    </svg>
+                    PDF
+                  </a>
+                  <a href="version" class="btn-format btn-video">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="5,3 19,12 5,21"/>
+                    </svg>
+                    Vidéo
+                  </a>
+                  <a href="version" class="btn-format btn-ppt">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                      <line x1="8" y1="21" x2="16" y2="21"/>
+                      <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    PPT
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carte BEF -->
+            <div class="tuto-card tuto_BEF">
+              <div class="card-header">
+                <div class="image_BEF"></div>
+                <div class="card-badge">Essentiel</div>
+              </div>
+              <div class="card-content">
+                <h3>Guide de la Déclaration BEF</h3>
+                <p>Bénéficiaire Effectif : déclarez en toute conformité</p>
+                <div class="card-actions">
+                  <a href="version" class="btn-format btn-pdf" download>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14,2 14,8 20,8"/>
+                    </svg>
+                    PDF
+                  </a>
+                  <a href="version" class="btn-format btn-video">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="5,3 19,12 5,21"/>
+                    </svg>
+                    Vidéo
+                  </a>
+                  <a href="version" class="btn-format btn-ppt">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                      <line x1="8" y1="21" x2="16" y2="21"/>
+                      <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    PPT
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carte DSF -->
+            <div class="tuto-card tuto_DSF">
+              <div class="card-header">
+                <div class="image_DSF"></div>
+                <div class="card-badge">Disponible</div>
+              </div>
+              <div class="card-content">
+                <h3>Guide de la Télédéclaration DSF</h3>
+                <p>Déclaration Statistique et Fiscale simplifiée</p>
+                <div class="card-actions">
+                  <a href="../fichiers_media/guide_utilisation_desf.pdf" class="btn-format btn-pdf" download>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14,2 14,8 20,8"/>
+                    </svg>
+                    PDF
+                  </a>
+                  <a href="../fichiers_media/video_dsf.mp4" class="btn-format btn-video" download>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="5,3 19,12 5,21"/>
+                    </svg>
+                    Vidéo
+                  </a>
+                  <a href="version" class="btn-format btn-ppt">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                      <line x1="8" y1="21" x2="16" y2="21"/>
+                      <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    PPT
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carte Documents Fiscaux -->
+            <div class="tuto-card tuto_docf">
+              <div class="card-header">
+                <div class="image_docf"></div>
+                <div class="card-badge">Pratique</div>
+              </div>
+              <div class="card-content">
+                <h3>Générer un document fiscal</h3>
+                <p>Obtenez vos documents fiscaux en quelques clics</p>
+                <div class="card-actions">
+                  <a href="version" class="btn-format btn-pdf" download>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14,2 14,8 20,8"/>
+                    </svg>
+                    PDF
+                  </a>
+                  <a href="version" class="btn-format btn-video">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="5,3 19,12 5,21"/>
+                    </svg>
+                    Vidéo
+                  </a>
+                  <a href="version" class="btn-format btn-ppt">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                      <line x1="8" y1="21" x2="16" y2="21"/>
+                      <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    PPT
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carte Timbres -->
+            <div class="tuto-card tuto_tim">
+              <div class="card-header">
+                <div class="image_tim"></div>
+                <div class="card-badge">Rapide</div>
+              </div>
+              <div class="card-content">
+                <h3>Télédéclaration des Timbres</h3>
+                <p>Gérez vos droits de timbre en ligne efficacement</p>
+                <div class="card-actions">
+                  <a href="version" class="btn-format btn-pdf" download>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14,2 14,8 20,8"/>
+                    </svg>
+                    PDF
+                  </a>
+                  <a href="version" class="btn-format btn-video">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="5,3 19,12 5,21"/>
+                    </svg>
+                    Vidéo
+                  </a>
+                  <a href="version" class="btn-format btn-ppt">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                      <line x1="8" y1="21" x2="16" y2="21"/>
+                      <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    PPT
+                  </a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      
+      <div class="acces_rapide">
+        <p>Accès rapide</p>
+        <ul>
+          <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/eregistration.aspx?er=empty">Immatriculation</a></li>
+          <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=IRPP">Déclaration annuelle des revenus des particuliers</a></li>
+          <li><a href="https://mesure.dgi.cm:8077/">Authentification ACF</a></li>
+          <li><a href="https://teledeclaration-dgi.cm/modules/Common/Account/Login.aspx?d=DSF">DSF</a></li>
+          <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-beffectif-prod%26redirect_uri%3Dhttps%253A%252F%252Fbef.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D45861e6e8d9749f8a809a3fa1958c2e5%26code_challenge%3DQqXWlrhFdDPx54VX2nzE18pbX-Xx8sk-9OuNAftvSXo%26code_challenge_method%3DS256%26response_mode%3Dquery">Bénéficiere Effectif</a></li>
+          <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dharmony-anr-prod%26redirect_uri%3Dhttps%253A%252F%252Ffanr.harmony2.cm%26response_type%3Dcode%26scope%3Dopenid%26state%3D03c3778136c2499da444e8fbac65ed00%26code_challenge%3DBsk2q0G97YrslDxJ3fcmMmxmOYndh2z2XFjpABkOmFM%26code_challenge_method%3DS256%26response_mode%3Dquery">Documents Fiscaux</a></li>
+          <li><a href="https://sso.harmony2.cm/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Ddpr-front-prod%26redirect_uri%3Dhttps%253A%252F%252Fdpr.harmony2.cm%252F%26response_type%3Dcode%26scope%3Dopenid%26state%3D9ca7eadecb764b19bc616c7840122fa6%26code_challenge%3DpFyU0KC__Sz6mtjafK51JuhrboRFdypytxdSr62ZmJ4%26code_challenge_method%3DS256">Déclaration Pré-remplie(DPR)</a></li>
+          <li><a href="https://otp.dgi.cm/">OTP/E-Billing</a></li>
+        </ul>
+      </div>        
+      
+      <br>
+
+       <div class="les_structures">
+  <div class="scrolling-wrapper">
+    <div class="scrolling-text" id="scrollingText">
+       <h2>Voici les structures opérationnelles du Centre régional du centre 2 des impôts. Pour plus d'information sur une structure, veuillez cliquer sur la structure dont vous voulez en savoir plus. &nbsp;&nbsp; • &nbsp;&nbsp; </h2>
+    </div>
+  </div>
+</div>
+  <section class="S_CRIC2">
+
+ <div class="structure_CRIC2">
+      <a href="../Document_html/nos_centres.html">
+            <div class="CSI">
+              <p>CSI-EPA</p>
+            </div>
+      </a>
+           <a href="../Document_html/nos_centres.html">
+              <div class="CSI">
+                <p>CIME Yaoundé Ouest</p>
+              </div>
+           </a>
+           <a href="../Document_html/nos_centres.html">
+            <div class="CSI">
+              <p>CFLP Yaoundé 2</p>
+            </div>
+            </a>
+            <a href="../Document_html/nos_centres.html">
+            <div class="CSI">
+              <p>CFLP Yaoundé 3</p>
+            </div>
+            </a>
+            <a href="../Document_html/nos_centres.html">
+            <div class="CSI">
+              <p>CFLP Yaoundé 6</p>                            
+            </div> 
+            </a>
+            <a href="../Document_html/nos_centres.html">
+            <div class="CSI">
+              <p>CFLP Yaoundé 7</p>                          
+            </div>
+            </a>
+          </div>
+          <div class="structure_image">            
+          </div>      
+    </section>        
   </main>
   <footer>
-    <div class="pieds">
+      <div class="pieds">
       <div class="appelle">
-        <p data-i18n="footer.copyright">&copy; 2025 Centre Régional des Impôts du Centre 2 </p>
-        <p data-i18n="footer.call_center">Centre d'appel<br>
-         <span> &nbsp 8200</span>
+        <p>&copy; 2025 Centre Régional des Impôts du Centre 2 </p>
+        <p>Centre d'appel
+         
         </p>
+        <span> &nbsp 8200</span>
       </div>
       <div class="reseaux">
-        <p data-i18n="footer.follow">Suivez nous</p>
+        <p>Suivez nous</p>
         <hr>
         <ul>
           <li>
@@ -224,7 +542,7 @@
                 <path
                   d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.405 24 24 23.408 24 22.674V1.326C24 .592 23.405 0 22.675 0" />
               </svg>
-              <span data-i18n="social.facebook">Facebook</span>
+              Facebook
             </a>
           </li>
           <li>
@@ -234,7 +552,7 @@
                 <path
                   d="M20.447 20.452h-3.554v-5.569c0-1.327-.027-3.037-1.849-3.037-1.851 0-2.132 1.445-2.132 2.939v5.667H9.358V9h3.414v1.561h.049c.476-.9 1.637-1.849 3.372-1.849 3.605 0 4.271 2.372 4.271 5.455v6.285zM5.337 7.433c-1.144 0-2.07-.927-2.07-2.07 0-1.144.926-2.07 2.07-2.07 1.143 0 2.07.926 2.07 2.07 0 1.143-.927 2.07-2.07 2.07zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.549C0 23.229.792 24 1.771 24h20.451C23.2 24 24 23.229 24 22.272V1.723C24 .771 23.2 0 22.225 0z" />
               </svg>
-              <span data-i18n="social.linkedin">LinkedIn</span>
+              LinkedIn
             </a>
           </li>
           <li>
@@ -244,30 +562,30 @@
                 <path
                   d="M20.52 3.48A11.78 11.78 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 1.64 6L0 24l6.26-1.64A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12a11.78 11.78 0 0 0-3.48-8.52zM12 22a9.93 9.93 0 0 1-5.09-1.39l-.36-.21-3.72.97.99-3.62-.23-.37A9.93 9.93 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9s-.44-.14-.62.14-.71.9-.87 1.09-.32.21-.6.07a8.13 8.13 0 0 1-2.39-1.47 8.93 8.93 0 0 1-1.65-2.05c-.17-.28 0-.43.13-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.06-.22-.53-.45-.46-.62-.47h-.53c-.18 0-.46.07-.7.34s-.92.9-.92 2.2.94 2.56 1.07 2.74c.13.18 1.85 2.83 4.5 3.86.63.22 1.12.35 1.5.45.63.16 1.2.14 1.65.09.5-.06 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z" />
               </svg>
-              <span data-i18n="social.whatsapp">WhatsApp</span>
+              WhatsApp
             </a>
           </li>
         </ul>
       </div>
       <div class="centre">
-        <p data-i18n="footer.structures">Nos structures</p>
+        <p>Nos structures</p>
         <hr>
         <ul>
-          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.csi">CSI EPA</a></li>
-          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cime">CIME Yaoundé Ouest</a></li>
-          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cflp2">CFLP Yaoundé 2</a></li>
-          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cflp3">CFLP Yaoundé 3</a></li>
-          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cflp6">CFLP Yaoundé 6</a></li>
-          <li><a href="../Document_html/nos_centres.html" data-i18n="footer.cflp7">CFLP Yaoundé 7</a></li>
+          <li><a href="../Document_html/nos_centres.html">CSI EPA</a></li>
+          <li><a href="../Document_html/nos_centres.html">CIME Yaoundé Ouest</a></li>
+          <li><a href="../Document_html/nos_centres.html">CFLP Yaoundé 2</a></li>
+          <li><a href="../Document_html/nos_centres.html">CFLP Yaoundé 3</a></li>
+          <li><a href="../Document_html/nos_centres.html">CFLP Yaoundé 6</a></li>
+          <li><a href="../Document_html/nos_centres.html">CFLP Yaoundé 7</a></li>
       </div>
       <div class="retour">
-        <p data-i18n="quick.access">Acces rapide</p>
+        <p>Acces rapide</p>
         <hr>
         <ul>
-          <li><a href="../index.html" data-i18n="nav.home">CRIC2</a></li>
-          <li><a href="../Document_html/service.html" data-i18n="nav.services">Services</a></li>
-          <li><a href="../Document_html/actualitès.html" data-i18n="nav.news">Actualité</a></li>
-          <li><a href="../Document_html/documentations.html" data-i18n="nav.documentations">Documentations</a>
+          <li><a href="../index.html">ACCUEIL</a></li>
+          <li><a href="../Document_html/service.html">Services</a></li>
+          <li><a href="../Document_html/actualitès.html">Actualité</a></li>
+          <li><a href="../Document_html/documentations.html">Documentations</a>
           </li>
         </ul>
       </div>
@@ -275,5 +593,6 @@
   </footer>
   <script src="../Document_js/CRIC2.js"></script>
   <script src="../Document_js/i18n.js"></script>
+  <script src="../Document_js/structure_defilement.js"></script>
 </body>
 </html>

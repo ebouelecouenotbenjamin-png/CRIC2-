@@ -1,31 +1,260 @@
 /* ===================================================================
-   MISSION PAGE - Styles modernes et responsifs
-   Basé sur le système de variables et design de CRIC2.css
+   MISSION PAGE - DESIGN CASCADE STYLE ORGANIGRAMME
+   Basé sur le style de organigramme.css
    ================================================================= */
 
+/* CRI - Design Ultra-Moderne 2025 avec effets visuels avancés */
 .CRI {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.CRIC2 {
-  background: linear-gradient(135deg, var(--blanc) 0%, var(--gris-light) 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 3rem;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--gris-medium);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(248, 250, 252, 0.05) 50%,
+    rgba(241, 245, 249, 0.02) 100%);
+  border-radius: 24px;
+  border: 2px solid rgba(255, 152, 0, 0.1);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
 }
 
-.CRIC2 > p:first-of-type {
+.CRI::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, 
+    var(--vert) 0%, 
+    var(--orange) 50%, 
+    var(--vert) 100%);
+  background-size: 200% 100%;
+  animation: gradient-slide 8s ease-in-out infinite;
+  border-radius: 24px 24px 0 0;
+}
+
+.CRI::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(10, 133, 96, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 152, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  animation: float-particles 20s ease-in-out infinite;
+}
+
+@keyframes gradient-slide {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float-particles {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(120deg); }
+  66% { transform: translateY(10px) rotate(240deg); }
+}
+
+/* CRIC2 - Design Premium avec effets visuels */
+.CRIC2 {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 2.5rem;
+  min-height: 450px;
+  z-index: 10;
+}
+
+.CRIC2::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  right: -1rem;
+  bottom: -1rem;
+  background: linear-gradient(135deg, 
+    rgba(10, 133, 96, 0.05) 0%, 
+    transparent 50%,
+    rgba(255, 152, 0, 0.05) 100%);
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0.7;
+  transition: opacity 0.6s ease;
+}
+
+.CRIC2:hover::before {
+  opacity: 1;
+}
+
+/* Image Organigramme - Design Ultra-Moderne 2025 */
+.org_image {
+  position: relative;
+  background: url(../image_projet/mission.png) no-repeat center/cover;
+  border-radius: 20px;
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+  height: 100%;
+  min-height: 400px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  flex: 1;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.org_image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(10, 133, 96, 0.2) 0%, 
+    transparent 40%,
+    rgba(255, 152, 0, 0.2) 100%);
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.org_image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%);
+  animation: shimmer 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.org_image:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 35px 70px rgba(0, 0, 0, 0.3),
+    0 0 0 2px rgba(255, 152, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 152, 0, 0.3);
+}
+
+.org_image:hover::before {
+  opacity: 0.8;
+}
+
+/* Style moderne pour le texte des missions - Design Premium 2025 */
+main > h3 + p {
+  position: relative;
   color: var(--noir);
-  background: var(--blanc);
-  padding: 1.5rem;
-  border-radius: 8px;
-  line-height: 1.75;
-  margin-bottom: 1.5rem;
-  border-left: 4px solid var(--orange);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.98) 0%, 
+    rgba(248, 250, 252, 0.95) 50%,
+    rgba(241, 245, 249, 0.92) 100%);
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  line-height: 1.9;
+  margin: 2rem 0;
+  border: 3px solid transparent;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-image: linear-gradient(135deg, 
+    var(--vert) 0%, 
+    var(--orange) 50%, 
+    var(--vert) 100%) 1;
+}
+
+main > h3 + p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, 
+    var(--vert) 0%, 
+    var(--orange) 25%, 
+    var(--vert) 50%, 
+    var(--orange) 75%, 
+    var(--vert) 100%);
+  background-size: 200% 100%;
+  animation: gradient-flow 6s ease-in-out infinite;
+  border-radius: 20px 20px 0 0;
+}
+
+main > h3 + p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(10, 133, 96, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255, 152, 0, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+main > h3 + p:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.12),
+    0 0 0 2px rgba(255, 152, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+main > h3 + p:hover::after {
+  opacity: 1;
+}
+
+main > h3 + p br {
+  display: block;
+  margin: 0.8rem 0;
+  content: "";
+}
+
+main > h3 + p br::before {
+  content: "•";
+  color: var(--orange);
+  font-weight: 700;
+  margin-right: 0.5rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes gradient-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
 }
 
 .CRIC2 h3 {
@@ -74,22 +303,32 @@
 .acces_rapide {
   width: 100%;
   box-sizing: border-box;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, var(--vert) 0%, var(--vert-dark) 100%);
-  border-radius: 12px;
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, 
+    var(--vert) 0%, 
+    var(--vert-dark) 50%,
+    var(--orange) 100%);
+  border-radius: var(--radius-xl);
   align-self: start;
   position: relative;
   z-index: 1;
-  box-shadow: var(--shadow-md);
+  box-shadow: 
+    0 15px 35px rgba(10, 133, 96, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .acces_rapide p {
   color: var(--blanc);
-  font-size: 1.25rem;
-  margin: 0 0 1rem 0;
-  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
 }
 
 .acces_rapide ul {
@@ -99,20 +338,30 @@
 }
 
 .acces_rapide ul li {
-  background: rgba(255, 255, 255, 0.1);
-  border-top: 2px solid var(--orange);
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
   padding: 1rem;
-  transition: all var(--transition-medium);
+  margin-bottom: 0.8rem;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50px;
+  min-height: 55px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
 }
 
 .acces_rapide ul li:hover {
-  background: var(--orange);
-  border-top-color: var(--orange-dark);
-  transform: translateX(4px);
+  background: linear-gradient(135deg, 
+    var(--orange) 0%, 
+    var(--orange-dark) 100%);
+  border-color: var(--orange-dark);
+  transform: translateX(8px) scale(1.02);
+  box-shadow: 
+    0 8px 25px rgba(255, 152, 0, 0.4),
+    0 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
 .acces_rapide a {
@@ -126,21 +375,24 @@
   color: var(--blanc);
 }
 
-h2 {
+main > h2 {
+  position: relative;
   color: var(--blanc);
-  font-size: clamp(1.5rem, 5vw, 2.3rem);
-  margin: 0 0 1.5rem 0;
-  letter-spacing: 1px;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin: 0 0 3rem 0;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  background: linear-gradient(135deg, var(--vert) 0%, var(--vert-dark) 100%);
+  font-weight: 900;
   text-align: center;
-  padding: 2rem;
-  border-left: 5px solid var(--orange);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  border-radius: 8px;
-  box-shadow: var(--shadow-md);
+  padding: 2.5rem 3rem;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-xl);
+  box-shadow: 
+    0 20px 40px rgba(10, 133, 96, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 900px) {
@@ -154,8 +406,9 @@ h2 {
   }
 
   .CRIC2 h3 {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     padding: 8px 12px;
+    font-weight: 500;
   }
 
   .CRIC2 h3 + p {
@@ -167,9 +420,10 @@ h2 {
     margin-left: 0;
   }
 
-  h2 {
-    font-size: 1.5rem;
+  main > h2 {
+    font-size: 1rem;
     padding: 1.5rem;
+    font-weight: 550;
   }
 
   .vrai_globe {
