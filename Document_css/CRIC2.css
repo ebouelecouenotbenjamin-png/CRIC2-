@@ -298,11 +298,8 @@ header {
   text-align: center;
   margin: 0 auto;
   min-height: auto;
-  border-left: 2px solid var(--orange);
-  border-right: 2px solid var(--orange);
   box-shadow: var(--shadow-md);
   max-width: 100%;
-  border-radius: 4px;
   position: relative;
   z-index: 10000;
 }
@@ -1120,10 +1117,14 @@ section {
 .image_cric2 {
   position: relative;
   width: 100%;
-  height: 1000px;
+  height: 800px;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--gris-light) 0%, var(--gris-medium) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--gris-light) 0%,
+    var(--gris-medium) 100%
+  );
   box-shadow: var(--shadow-lg);
   perspective: 1000px;
 }
@@ -1135,10 +1136,10 @@ section {
   object-fit: cover;
   opacity: 0;
   transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: slideUpImage 6s infinite;
+  animation: slideUpImage 30s linear infinite;
 }
 
-/* Animation du défilement */
+/* Animation du défilement continue et infinie */
 @keyframes slideUpImage {
   0% {
     opacity: 0;
@@ -1158,30 +1159,31 @@ section {
   }
 }
 
-/* Délai pour chaque image */
+/* Délai pour chaque image - cycle continu de 30 secondes */
 .image_cric2 img:nth-child(1) {
   animation-delay: 0s;
 }
 
 .image_cric2 img:nth-child(2) {
-  animation-delay: 6s;
+  animation-delay: -6s;
 }
 
 .image_cric2 img:nth-child(3) {
-  animation-delay: 12s;
+  animation-delay: -12s;
 }
 
 .image_cric2 img:nth-child(4) {
-  animation-delay: 18s;
+  animation-delay: -18s;
 }
 
 .image_cric2 img:nth-child(5) {
-  animation-delay: 24s;
+  animation-delay: -24s;
 }
 
 /* Animation de pulsation pour le badge */
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -1191,7 +1193,8 @@ section {
 
 /* Effet de scintillement des indicateurs */
 @keyframes indicatorGlow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 5px rgba(255, 152, 0, 0.4);
   }
   50% {
@@ -1239,7 +1242,12 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
   pointer-events: none;
   z-index: 2;
 }
@@ -1252,7 +1260,12 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.05) 100%);
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
   pointer-events: none;
   z-index: 1;
 }
@@ -2112,23 +2125,23 @@ nav a:hover::after {
   .image_cric2 {
     height: 400px;
   }
-  
+
   .image_cric2 img {
     animation: slideUpImage 10s infinite;
   }
-  
+
   .image_cric2 img:nth-child(2) {
     animation-delay: 2s;
   }
-  
+
   .image_cric2 img:nth-child(3) {
     animation-delay: 4s;
   }
-  
+
   .image_cric2 img:nth-child(4) {
     animation-delay: 6s;
   }
-  
+
   .image_cric2 img:nth-child(5) {
     animation-delay: 8s;
   }
@@ -2291,7 +2304,7 @@ nav a:hover::after {
 }
 
 /* --- Téléphones mobiles (max 600px) --- */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .hero-visual {
     display: grid;
     grid-template-columns: 1fr;
@@ -2320,27 +2333,27 @@ nav a:hover::after {
   .image_cric2 {
     height: 300px;
   }
-  
+
   .image_cric2 img {
     animation: slideUpImage 8s infinite;
   }
-  
+
   .image_cric2 img:nth-child(2) {
     animation-delay: 1.6s;
   }
-  
+
   .image_cric2 img:nth-child(3) {
     animation-delay: 3.2s;
   }
-  
+
   .image_cric2 img:nth-child(4) {
     animation-delay: 4.8s;
   }
-  
+
   .image_cric2 img:nth-child(5) {
     animation-delay: 6.4s;
   }
-  
+
   .entete {
     padding: 1rem 0.75rem;
     grid-template-columns: 1fr 1fr 1fr;
@@ -2569,27 +2582,27 @@ nav a:hover::after {
   .image_cric2 {
     height: 250px;
   }
-  
+
   .image_cric2 img {
     animation: slideUpImage 6s infinite;
   }
-  
+
   .image_cric2 img:nth-child(2) {
     animation-delay: 1.2s;
   }
-  
+
   .image_cric2 img:nth-child(3) {
     animation-delay: 2.4s;
   }
-  
+
   .image_cric2 img:nth-child(4) {
     animation-delay: 3.6s;
   }
-  
+
   .image_cric2 img:nth-child(5) {
     animation-delay: 4.8s;
   }
-  
+
   .structure_CRIC2 {
     grid-template-columns: 1fr;
   }
